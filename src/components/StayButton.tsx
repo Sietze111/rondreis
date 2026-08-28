@@ -43,7 +43,7 @@ export const StayButton: React.FC<StayButtonProps> = ({
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="brutal-btn mt-2 flex items-center justify-center gap-2 bg-[#7B4DC0] text-white px-4 py-3 font-mono text-[12px] font-bold tracking-wider"
+      className="btn-solid btn--purple mt-2"
     >
       <BedDouble size={15} />
       {t("stay.title")}

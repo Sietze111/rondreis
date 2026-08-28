@@ -37,7 +37,7 @@ export const DirectionsButton: React.FC<DirectionsButtonProps> = ({
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="brutal-btn mt-3 flex items-center justify-center gap-2 bg-[#161616] text-[#F5C400] px-4 py-3 font-mono text-[12px] font-bold tracking-wider"
+      className="btn-solid btn--dark mt-3"
     >
       <Navigation size={15} />
       {t("directions.go")}

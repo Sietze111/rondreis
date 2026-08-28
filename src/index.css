@@ -74,6 +74,31 @@ body {
 .brutal-btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--color-ink); }
 .brutal-btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--color-ink); }
 
+/* High-contrast solid buttons (used inside map popups where Leaflet
+   otherwise overrides link colour with a low-contrast blue). */
+.btn-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 3px solid var(--color-ink);
+  box-shadow: 4px 4px 0 var(--color-ink);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff !important;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background-color 0.08s ease;
+}
+.btn-solid:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--color-ink); }
+.btn-solid:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--color-ink); }
+.btn-solid svg { color: inherit; }
+.btn-solid.btn--dark { background: var(--color-ink); }
+.btn-solid.btn--dark:hover { background: #E33D2E; }
+.btn-solid.btn--purple { background: #7B4DC0; }
+.btn-solid.btn--purple:hover { background: #6A3BB0; }
+
 /* Hard pixel-style drop shadow utility (for cards/images) */
 .hard-shadow { box-shadow: 6px 6px 0 var(--color-ink); }
 .hard-shadow-sm { box-shadow: 3px 3px 0 var(--color-ink); }
