@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/france-war-trails/sw.js', { scope: '/france-war-trails/' })})}
