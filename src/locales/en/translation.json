@@ -1,0 +1,128 @@
+{
+  "title": "Yevheniia & Olena's Bern Passport",
+  "subtitle": "A Self-Guided Walking & Wonder Map · Hidden gems of Bern",
+  "description": "Explore Bern and all its hidden gems with this self-guided walking map. Tap a stamp on the map, or pick a stop from the list below to fly straight to it. Tap the circle next to a name to mark it visited as you go.",
+
+  "install": "Install Passport App",
+
+  "categories": {
+    "all": "All Stops",
+    "history": "Historic",
+    "nature": "Nature",
+    "culture": "Culture",
+    "water": "Water",
+    "viewpoint": "Viewpoints"
+  },
+
+  "howToTitle": "How to use:",
+  "howTo": "Tap a stamp on the map, or pick a stop from the list below to fly straight to it. Tap the circle next to a name to mark it visited as you go.",
+
+  "mobile": {
+    "map": "Map View",
+    "list": "Stops List"
+  },
+
+  "footer": {
+    "tiles": "Map data & tiles © OpenStreetMap contributors",
+    "built": "Stamps are hand-drawn vector illustrations · Built with React & Tailwind"
+  },
+  "progress": {
+    "title": "Passport Progress",
+    "count": "{{visited}} / {{total}} locations visited"
+  },
+  "popup": {
+    "goodToKnow": "Good to know"
+  },
+  "stops": {
+    "rosengarten": {
+      "name": "Rosengarten",
+      "blurb": "Bern's iconic rose garden with panoramic Old Town views.",
+      "tip": "Best at sunset."
+    },
+    "baerenpark": {
+      "name": "BärenPark",
+      "blurb": "Home of Bern's symbolic bears.",
+      "tip": "Cross Nydeggbrücke afterwards."
+    },
+    "kaefigturm": {
+      "name": "Käfigturm",
+      "blurb": "Former prison tower.",
+      "tip": "Free exhibitions."
+    },
+    "kindlifresser": {
+      "name": "Kindlifresserbrunnen",
+      "blurb": "Bern's famous Child Eater Fountain.",
+      "tip": "Visit early morning."
+    },
+    "botanical": {
+      "name": "Botanical Garden",
+      "blurb": "Free botanical gardens.",
+      "tip": "Great in spring."
+    },
+    "gurten": {
+      "name": "Gurten",
+      "blurb": "Bern's local mountain.",
+      "tip": "Ride the funicular."
+    },
+    "egelsee": {
+      "name": "Egelsee",
+      "blurb": "Quiet hidden pond.",
+      "tip": "Peaceful evenings."
+    },
+    "elfenau": {
+      "name": "Elfenau",
+      "blurb": "Historic riverside park.",
+      "tip": "Walk along the Aare."
+    },
+    "museumkom": {
+      "name": "Museum für Kommunikation",
+      "blurb": "Interactive communication museum.",
+      "tip": "Ideal on rainy days."
+    },
+    "hausreligionen": {
+      "name": "Haus der Religionen",
+      "blurb": "Interfaith cultural center.",
+      "tip": "Visit Restaurant Vanakam."
+    },
+    "marzili": {
+      "name": "Marzili Freibad",
+      "blurb": "Popular riverside swimming area.",
+      "tip": "Float the Aare."
+    },
+    "lorrainebad": {
+      "name": "Lorrainebad",
+      "blurb": "Local riverside bathing spot.",
+      "tip": "Less crowded."
+    },
+    "wohlensee": {
+      "name": "Wohlensee Dam",
+      "blurb": "Reservoir west of Bern.",
+      "tip": "Perfect by bike."
+    },
+    "bantigerturm": {
+      "name": "Bantiger Turm",
+      "blurb": "Excellent panoramic hill.",
+      "tip": "Climb the tower."
+    },
+    "chutzenturm": {
+      "name": "Chutzenturm",
+      "blurb": "Wooden lookout tower.",
+      "tip": "Clear days only."
+    },
+    "schlossjegenstorf": {
+      "name": "Schloss Jegenstorf",
+      "blurb": "Moated baroque castle.",
+      "tip": "Museum inside."
+    },
+    "schlosslaupen": {
+      "name": "Schloss Laupen",
+      "blurb": "Historic hilltop castle.",
+      "tip": "Explore old town."
+    },
+    "belpairport": {
+      "name": "Bern Airport Viewing Area",
+      "blurb": "Watch aircraft movements.",
+      "tip": "Weekend activity."
+    }
+  }
+}

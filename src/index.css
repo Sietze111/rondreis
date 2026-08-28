@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom background pattern for vintage ticket effect */
+.bg-repeating-dots {
+  background-image: repeating-linear-gradient(to right, #D8C9A0 0 6px, transparent 6px 10px);
+}
+
+/* Leaflet override styles matching parchment theme */
+.stamp-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.stamp-marker svg {
+  filter: drop-shadow(0 4px 8px rgba(27,42,74,0.30));
+  transition: transform 0.15s ease-in-out;
+}
+
+.stamp-marker:hover svg {
+  transform: scale(1.1);
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FBF6E9 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 22px rgba(27,42,74,0.16) !important;
+  border: 1px solid #D8C9A0 !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-tip {
+  background: #FBF6E9 !important;
+  border: 1px solid #D8C9A0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 14px 16px !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #1B2A4A !important;
+  padding: 6px 8px 0 0 !important;
+}
+
+/* Custom scrollbars for parchment styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3ECD9;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8C9A0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8842C;
+}
+
+/* General fixes */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #F3ECD9;
+}
