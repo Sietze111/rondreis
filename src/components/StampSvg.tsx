@@ -85,28 +85,71 @@ interface StampSvgProps {
 }
 
 export const StampSvg: React.FC<StampSvgProps> = ({ cat, glyph, size }) => {
+  const uid = React.useId();
+  const gid = `paper-${cat}-${uid.replace(/[^a-zA-Z0-9]/g, "")}`;
   const color = COLORS[cat];
   const glyphMarkup = GLYPHS[glyph] || "";
 
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" className="select-none">
+      <defs>
+        <radialGradient id={gid} cx="38%" cy="30%" r="90%">
+          <stop offset="0%" stopColor="#F7F1E2" />
+          <stop offset="60%" stopColor="#ECE4CF" />
+          <stop offset="100%" stopColor="#D9CEB2" />
+        </radialGradient>
+      </defs>
+
+      {/* Paper disc */}
       <circle
         cx="32"
         cy="32"
         r="30"
-        fill="#E8E2D3"
-        stroke="#2B2B23"
-        strokeWidth="2.5"
+        fill={`url(#${gid})`}
       />
+
+      {/* Perforated postage edge */}
+      <circle
+        cx="32"
+        cy="32"
+        r="29.2"
+        fill="none"
+        stroke="#40301a"
+        strokeOpacity="0.85"
+        strokeWidth="1.6"
+        strokeDasharray="2.6 3.1"
+      />
+
+      {/* Brass inner ring */}
+      <circle
+        cx="32"
+        cy="32"
+        r="24.4"
+        fill="none"
+        stroke="#B28A2E"
+        strokeWidth="1"
+        strokeDasharray="2 5"
+        opacity="0.9"
+      />
+
+      {/* Category ring */}
+      <circle
+        cx="32"
+        cy="32"
+        r="22.4"
+        fill="none"
+        stroke={color}
+        strokeWidth="1.4"
+        opacity="0.95"
+      />
+
       <g
         fill="none"
         stroke={color}
-        strokeWidth="1.8"
+        strokeWidth="1.9"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <circle cx="32" cy="32" r="23.5" strokeDasharray="2.2 3.4" />
-        <circle cx="32" cy="32" r="19" />
         <g dangerouslySetInnerHTML={{ __html: glyphMarkup }} />
       </g>
     </svg>

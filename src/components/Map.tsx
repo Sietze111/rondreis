@@ -7,6 +7,7 @@ import type { Stop } from "./StopList";
 import { StampSvg, COLORS } from "./StampSvg";
 import { DirectionsButton } from "./DirectionsButton";
 import { renderToString } from "react-dom/server";
+import { Clock } from "lucide-react";
 
 interface MapProps {
   stops: Stop[];
@@ -81,49 +82,73 @@ export const RouteMap: React.FC<MapProps> = ({
         popupAnchor: [0, -14],
       });
 
+      const hoursKey = `stops.${stop.id}.hours`;
+      const hours = i18n.t(hoursKey);
+
       const popupHtml = renderToString(
-        <div className="popup-card w-[250px] font-sans">
-          <div className="popup-head flex gap-3 items-center mb-2">
-            <div style={{ transform: `rotate(${rotPopup}deg)` }}>
-              <StampSvg cat={stop.cat} glyph={stop.glyph} size={58} />
+        <div className="popup-card w-[252px] font-sans text-[#25271E]">
+          {/* Header */}
+          <div
+            className="px-3 pt-3 pb-2 flex gap-2.5 items-center relative"
+            style={{
+              background: `linear-gradient(180deg, ${COLORS[stop.cat]}18, transparent)`,
+              borderBottom: `1px solid ${COLORS[stop.cat]}55`,
+            }}
+          >
+            <div className="flex-shrink-0" style={{ transform: `rotate(${rotPopup}deg)` }}>
+              <StampSvg cat={stop.cat} glyph={stop.glyph} size={56} />
             </div>
-            <div>
-              <p className="popup-title font-serif font-extrabold text-[16px] leading-tight text-[#2B2B23]">
+            <div className="min-w-0">
+              <p className="font-serif font-bold text-[16px] leading-[1.1] text-[#25271E]">
                 {i18n.t(`stops.${stop.id}.name`)}
               </p>
-              <div className="flex flex-wrap gap-1.5 mt-1">
+              <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
                 <span
-                  className="popup-badge font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block"
+                  className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block"
                   style={{
-                    backgroundColor: `${COLORS[stop.cat]}22`,
-                    color: COLORS[stop.cat],
-                    border: `1px solid ${COLORS[stop.cat]}77`,
+                    backgroundColor: COLORS[stop.cat],
+                    color: "#fff",
                   }}
                 >
                   {i18n.t(`categories.${stop.cat}`)}
                 </span>
-                <span className="popup-date font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block bg-[#2B2B23] text-[#E8E2D3]">
+                <span className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block bg-[#20241B] text-[#D8D0B8] border border-[#B28A2E]/50">
                   {i18n.t(`stops.${stop.id}.date`)}
                 </span>
               </div>
             </div>
           </div>
-          <p className="popup-blurb text-[13.5px] leading-relaxed text-[#2B2B23] mb-2">
-            {i18n.t(`stops.${stop.id}.blurb`)}
-          </p>
-          <div className="popup-context text-[12.5px] leading-relaxed bg-[#2B2B23]/[0.04] border border-[#2B2B23]/15 p-2.5 rounded text-[#2B2B23]">
-            <b className="font-mono text-[10px] uppercase tracking-wider text-[#7A2E2E] block mb-0.5">
-              {i18n.t("popup.history")}
-            </b>
-            {i18n.t(`stops.${stop.id}.context`)}
+
+          <div className="px-3 py-2.5">
+            <p className="text-[13px] leading-relaxed text-[#25271E] mb-2">
+              {i18n.t(`stops.${stop.id}.blurb`)}
+            </p>
+            <div className="text-[12.5px] leading-relaxed bg-[#20241B]/[0.05] border border-[#20241B]/15 p-2.5 rounded text-[#25271E]">
+              <b className="font-mono text-[10px] uppercase tracking-wider text-[#7C2B2B] block mb-0.5">
+                {i18n.t("popup.history")}
+              </b>
+              {i18n.t(`stops.${stop.id}.context`)}
+            </div>
+            {hours !== hoursKey && (
+              <div className="text-[12.5px] leading-relaxed mt-2 flex items-start gap-2 bg-[#7C2B2B]/[0.07] border border-[#7C2B2B]/20 p-2.5 rounded text-[#25271E]">
+                <Clock size={13} className="flex-shrink-0 mt-0.5 text-[#7C2B2B]" />
+                <span>{hours}</span>
+              </div>
+            )}
+            <div
+              className="text-[12.5px] leading-relaxed p-2.5 rounded mt-2 text-[#3A3C2E]"
+              style={{
+                background: "rgba(178,138,46,0.10)",
+                borderLeft: "3px solid #B28A2E",
+              }}
+            >
+              <b className="font-mono text-[10px] uppercase tracking-wider text-[#8a6c1f] block mb-0.5">
+                {i18n.t("popup.goodToKnow")}
+              </b>
+              {i18n.t(`stops.${stop.id}.tip`)}
+            </div>
+            <DirectionsButton lat={stop.lat} lng={stop.lng} />
           </div>
-          <div className="popup-tip text-[12.5px] leading-relaxed bg-[#2B2B23]/5 border-l-4 border-[#2B2B23] p-2.5 rounded mt-2 text-[#5A5A4E]">
-            <b className="font-mono text-[10px] uppercase tracking-wider text-[#2B2B23] block mb-0.5">
-              {i18n.t("popup.goodToKnow")}
-            </b>
-            {i18n.t(`stops.${stop.id}.tip`)}
-          </div>
-          <DirectionsButton lat={stop.lat} lng={stop.lng} />
         </div>,
       );
 
@@ -158,7 +183,7 @@ export const RouteMap: React.FC<MapProps> = ({
   }, [selectedStop, onClearSelectedStop]);
 
   return (
-    <div className="relative w-full h-full min-h-[40vh] md:min-h-0 bg-[#cfc7b0]">
+    <div className="relative w-full h-full min-h-[40vh] md:min-h-0 bg-[#DFD6BD]">
       <div
         ref={mapContainerRef}
         className="w-full h-full"

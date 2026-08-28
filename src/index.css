@@ -1,75 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  /* France War Trails palette */
+  --color-paper: #EAE3D0;
+  --color-paper-deep: #DFD6BD;
+  --color-card: #F3EDDE;
+  --color-tan: #C6B99A;
+  --color-ink: #25271E;
+  --color-ink-soft: #3A3C2E;
+  --color-charcoal: #20241B;
+  --color-charcoal-2: #2A2E22;
+  --color-brass: #B28A2E;
+  --color-brass-soft: #CAA75A;
+  --color-crimson: #7C2B2B;
+  --color-olive: #4F553A;
+  --color-muted: #6D6855;
+
+  --shadow-card: 0 1px 2px rgba(32, 36, 27, 0.06), 0 6px 18px -6px rgba(32, 36, 27, 0.18);
+  --shadow-lift: 0 12px 28px -8px rgba(32, 36, 27, 0.35);
 }
 
-/* Custom background pattern for vintage ticket effect */
-.bg-repeating-dots {
-  background-image: repeating-linear-gradient(to right, #B8AD8E 0 6px, transparent 6px 10px);
+/* ---------- Base ---------- */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }
 
-/* Leaflet override styles matching parchment theme */
-.stamp-marker {
-  background: transparent !important;
-  border: none !important;
+#root { width: 100%; margin: 0; padding: 0; }
+
+::selection { background: rgba(178, 138, 46, 0.35); color: #171a12; }
+
+/* ---------- Aged paper texture ---------- */
+.texture-paper {
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(178, 138, 46, 0.05), transparent 42%),
+    radial-gradient(circle at 82% 70%, rgba(124, 43, 43, 0.05), transparent 46%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
 }
+
+/* Topographic / contour lines for hero foreground */
+.texture-topo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23CAA75A' stroke-width='1' opacity='0.14'%3E%3Cellipse cx='160' cy='-40' rx='120' ry='120'/%3E%3Cellipse cx='160' cy='-40' rx='95' ry='95'/%3E%3Cellipse cx='160' cy='-40' rx='70' ry='70'/%3E%3Cellipse cx='160' cy='-40' rx='45' ry='45'/%3E%3Cellipse cx='60' cy='230' rx='110' ry='110'/%3E%3Cellipse cx='60' cy='230' rx='85' ry='85'/%3E%3Cellipse cx='60' cy='230' rx='60' ry='60'/%3E%3Cellipse cx='300' cy='150' rx='120' ry='120'/%3E%3Cellipse cx='300' cy='150' rx='95' ry='95'/%3E%3Cellipse cx='300' cy='150' rx='70' ry='70'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Fine double rule used under hero title */
+.rule-brass {
+  position: relative;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-brass) 20%, var(--color-brass) 80%, transparent);
+}
+
+/* Small ticked/notched brass divider */
+.ticks {
+  background-image: repeating-linear-gradient(90deg, var(--color-brass) 0 3px, transparent 3px 9px);
+}
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--color-paper-deep); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-tan), #A99B77);
+  border: 2px solid var(--color-paper-deep);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-brass); }
+
+/* ---------- Leaflet / markers ---------- */
+.stamp-marker { background: transparent !important; border: none !important; }
 
 .stamp-marker svg {
-  filter: drop-shadow(0 4px 8px rgba(43,43,35,0.30));
-  transition: transform 0.15s ease-in-out;
+  filter: drop-shadow(0 5px 9px rgba(32, 36, 27, 0.4));
+  transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.4, 1), filter 0.18s;
 }
-
 .stamp-marker:hover svg {
-  transform: scale(1.1);
+  transform: scale(1.18) rotate(-2deg);
+  filter: drop-shadow(0 7px 12px rgba(32, 36, 27, 0.5));
 }
 
+/* Popup card */
 .leaflet-popup-content-wrapper {
-  background: #E8E2D3 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 22px rgba(43,43,35,0.16) !important;
-  border: 1px solid #B8AD8E !important;
+  background: var(--color-card) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 18px 40px -12px rgba(20, 22, 15, 0.5), 0 0 0 1px var(--color-tan) !important;
   padding: 0 !important;
+  overflow: hidden;
 }
-
-.leaflet-popup-tip {
-  background: #E8E2D3 !important;
-  border: 1px solid #B8AD8E !important;
-}
-
-.leaflet-popup-content {
-  margin: 14px 16px !important;
-}
-
+.leaflet-popup-tip { background: var(--color-card) !important; box-shadow: 0 0 0 1px var(--color-tan) !important; }
+.leaflet-popup-content { margin: 0 !important; }
 .leaflet-container a.leaflet-popup-close-button {
-  color: #2B2B23 !important;
+  color: var(--color-ink) !important;
+  font-size: 18px !important;
   padding: 6px 8px 0 0 !important;
+  z-index: 20;
 }
 
-/* Custom scrollbars for parchment styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #D9D2C0;
-}
-::-webkit-scrollbar-thumb {
-  background: #B8AD8E;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #8A6D2F;
+/* Top accent band on popups */
+.popup-card { position: relative; }
+.popup-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-brass), var(--color-crimson) 60%, var(--color-charcoal));
 }
 
-/* General fixes */
-#root {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+/* Map attribution subtlety */
+.leaflet-control-attribution {
+  background: rgba(234, 227, 208, 0.85) !important;
+  color: var(--color-muted) !important;
+  font-size: 9px !important;
 }
-body {
-  background: #D9D2C0;
+.leaflet-control-attribution a { color: var(--color-olive) !important; }
+
+/* Zoom controls */
+.leaflet-bar a { background: var(--color-card) !important; color: var(--color-ink) !important; border-color: var(--color-tan) !important; }
+.leaflet-bar a:hover { background: var(--color-tan) !important; }
+
+/* ---------- Scroll reveal ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.4, 1) both; }
+
+/* ---------- Button press feedback ---------- */
+.press { transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.4, 1); }
+.press:active { transform: translateY(1px) scale(0.98); }
+
+/* ---------- Brutal hairline card ---------- */
+.panel {
+  background: var(--color-card);
+  border: 1px solid var(--color-tan);
+  box-shadow: var(--shadow-card);
 }

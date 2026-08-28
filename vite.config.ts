@@ -12,6 +12,25 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,png,svg,webmanifest}"],
+        navigateFallback: "/rondreis/index.html",
+        navigateFallbackDenylist: [/^\/manifest\.webmanifest$/],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/[abc]\.tile\.openstreetmap\.org\/.*/,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "map-tiles",
+              expiration: {
+                maxEntries: 6000,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+              },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+        ],
+      },
       manifest: {
         name: "France War Trails — Iepe & Sietze",
         short_name: "War Trails",

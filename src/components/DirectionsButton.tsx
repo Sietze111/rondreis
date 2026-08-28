@@ -25,7 +25,7 @@ export const DirectionsButton: React.FC<DirectionsButtonProps> = ({
         title={t("directions.go")}
         aria-label={t("directions.go")}
         onClick={(e) => e.stopPropagation()}
-        className="w-7 h-7 rounded-full border border-[#2B2B23]/25 flex items-center justify-center text-[#2B2B23] hover:bg-[#2B2B23] hover:text-[#E8E2D3] transition-colors flex-shrink-0"
+        className="w-7 h-7 rounded-full border border-[#25271E]/30 flex items-center justify-center text-[#25271E] hover:bg-[#7C2B2B] hover:border-[#7C2B2B] hover:text-[#F3EDDE] transition-colors press flex-shrink-0"
       >
         <Navigation size={13} />
       </a>
@@ -37,7 +37,7 @@ export const DirectionsButton: React.FC<DirectionsButtonProps> = ({
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="mt-3 flex items-center justify-center gap-2 bg-[#2B2B23] text-[#E8E2D3] rounded-lg px-4 py-2.5 font-mono text-[11px] tracking-wider font-bold hover:bg-[#7A2E2E] transition-colors"
+      className="press mt-3 flex items-center justify-center gap-2 bg-[#25271E] text-[#F3EDDE] rounded-lg px-4 py-2.5 font-mono text-[11px] tracking-wider font-bold hover:bg-[#7C2B2B] border border-[#B28A2E]/40 transition-colors"
     >
       <Navigation size={15} />
       {t("directions.go")}

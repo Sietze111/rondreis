@@ -7,7 +7,7 @@ import { StopList } from "./components/StopList";
 import { RouteMap } from "./components/Map";
 import { COLORS } from "./components/StampSvg";
 import { LanguagePicker } from "./components/LanguagePicker";
-import { Map as MapIcon, List as ListIcon, Download } from "lucide-react";
+import { Map as MapIcon, List as ListIcon, Download, Search } from "lucide-react";
 
 const CATEGORY_IDS = [
   "all",
@@ -50,6 +50,7 @@ function App() {
   const { t } = useTranslation();
   const [visited, setVisited] = useState<Set<string>>(new Set());
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [search, setSearch] = useState<string>("");
   const [selectedStop, setSelectedStop] = useState<Stop | null>(null);
   const [mobileView, setMobileView] = useState<"map" | "list">("map");
   const [deferredPrompt, setDeferredPrompt] =
@@ -114,51 +115,101 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#D9D2C0] text-[#2B2B23] font-sans antialiased">
+    <div className="flex flex-col min-h-screen texture-paper text-[#25271E] font-sans antialiased">
       {/* Header / Masthead */}
-      <header className="px-5 py-6 md:px-8 md:py-7 bg-[#D9D2C0] border-b-2 border-[#2B2B23] relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
-            <div>
-              <p className="font-mono text-[10px] md:text-xs tracking-[0.14em] uppercase text-[#7A2E2E] font-semibold mb-1.5">
-                {t("subtitle")}
-              </p>
-              <h1 className="font-serif text-3xl md:text-4xl font-extrabold tracking-tight">
+      <header className="relative overflow-hidden bg-[#20241B] text-[#EAE3D0]">
+        {/* texture + glow layers */}
+        <div
+          className="absolute inset-0 texture-topo opacity-70"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0"
+          aria-hidden
+          style={{
+            background:
+              "radial-gradient(60% 100% at 12% 0%, rgba(124,43,43,0.42), transparent 70%), radial-gradient(55% 120% at 92% 10%, rgba(178,138,46,0.22), transparent 70%)",
+          }}
+        />
+        {/* brass top accent */}
+        <div className="relative h-[3px] bg-gradient-to-r from-[#7C2B2B] via-[#B28A2E] to-[#7C2B2B]" />
+
+        <div className="relative max-w-7xl mx-auto px-5 py-8 md:px-8 md:py-10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="min-w-0">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="font-mono text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-[#CAA75A] font-semibold">
+                  {t("subtitle")}
+                </span>
+                <span className="hidden sm:block w-16 h-px bg-[#B28A2E]/50" />
+              </div>
+
+              <h1 className="font-display text-4xl md:text-6xl font-bold uppercase leading-[0.95] tracking-[0.02em] text-[#F3EDDE] [text-shadow:0_2px_18px_rgba(0,0,0,0.45)]">
                 {t("title")}
               </h1>
+
+              <div className="mt-4 rule-brass w-28 md:w-40" />
+
+              <p className="mt-4 max-w-2xl font-serif italic text-[15px] md:text-[17px] leading-relaxed text-[#D8D0B8]">
+                {t("description")}
+              </p>
             </div>
-            <div className="flex items-center gap-3 self-start">
-              <LanguagePicker />
-              {deferredPrompt && (
-                <button
-                  onClick={handleInstallClick}
-                  className="bg-[#7A2E2E] text-white border-[1.5px] border-[#7A2E2E] hover:bg-[#E8E2D3] hover:text-[#7A2E2E] rounded-full px-5 py-2 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 font-bold shadow-sm hover:-translate-y-0.5 cursor-pointer"
-                >
-                  <Download size={14} />
-                  {t("install")}
-                </button>
-              )}
+
+            {/* Right cluster: seal + controls */}
+            <div className="flex flex-col items-start md:items-end gap-4">
+              {/* Regimental seal */}
+              <div className="hidden md:flex items-center gap-4">
+                <div className="reveal w-16 h-16 rounded-full border-2 border-[#B28A2E]/70 flex items-center justify-center rotate-[-6deg] bg-[#2A2E22]/80 shadow-[0_8px_20px_rgba(0,0,0,0.4)]">
+                  <span className="font-display text-[11px] leading-tight text-center text-[#CAA75A] uppercase px-1">
+                    44<br />Remember
+                  </span>
+                </div>
+                <div className="hidden sm:block">
+                  <p className="font-mono text-[13px] tracking-[0.2em] uppercase text-[#D8D0B8]">
+                    Dunkirk · Normandy
+                  </p>
+                  <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#B28A2E] mt-1">
+                    Iepe &amp; Sietze
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5 self-start md:self-auto">
+                <LanguagePicker />
+                {deferredPrompt && (
+                  <button
+                    onClick={handleInstallClick}
+                    className="press bg-[#7C2B2B] text-[#F3EDDE] border border-[#B28A2E]/60 hover:bg-[#8F3333] rounded-full px-5 py-2 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 font-bold cursor-pointer shadow-[0_6px_16px_rgba(0,0,0,0.35)]"
+                  >
+                    <Download size={14} />
+                    {t("install")}
+                  </button>
+                )}
+              </div>
             </div>
           </div>
-          <p className="max-w-2xl text-sm md:text-[15px] leading-relaxed text-[#5A5A4E] mb-5">
-            {t("description")}
-          </p>
 
           {/* Filter Chips */}
-          <div className="flex gap-2.5 flex-wrap">
+          <div className="flex gap-2 flex-wrap mt-7">
             {CATEGORY_IDS.map((categoryId) => {
               const active = activeCategory === categoryId;
-              const color = CATEGORY_COLORS[categoryId];
+              const color =
+                categoryId === "all" ? "#B28A2E" : CATEGORY_COLORS[categoryId];
 
               return (
                 <button
                   key={categoryId}
                   onClick={() => setActiveCategory(categoryId)}
-                  className="border-[1.5px] rounded-full px-4 py-1.5 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 hover:-translate-y-0.5"
+                  className="press border rounded-full pl-2.5 pr-4 py-1.5 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 text-[#D8D0B8] hover:-translate-y-0.5 cursor-pointer"
                   style={{
-                    borderColor: active ? color : "#2B2B23",
-                    backgroundColor: active ? color : "#E8E2D3",
-                    color: active ? "#fff" : "#2B2B23",
+                    borderColor: active ? color : "rgba(216,208,184,0.35)",
+                    backgroundColor: active
+                      ? color
+                      : "rgba(234,227,208,0.06)",
+                    color: active ? "#fff" : "#D8D0B8",
+                    boxShadow: active
+                      ? "0 6px 16px -4px rgba(0,0,0,0.5)"
+                      : "none",
                   }}
                 >
                   <span
@@ -167,7 +218,7 @@ function App() {
                       backgroundColor: active
                         ? "#fff"
                         : categoryId === "all"
-                          ? "#2B2B23"
+                          ? "#D8D0B8"
                           : COLORS[categoryId as keyof typeof COLORS],
                     }}
                   />
@@ -178,21 +229,37 @@ function App() {
           </div>
         </div>
 
-        {/* Decorative bottom line */}
-        <div className="absolute left-5 right-5 bottom-1.5 h-[1px] bg-repeating-dots opacity-40" />
+        {/* notched bottom divider */}
+        <div className="relative h-[3px] ticks opacity-70" />
       </header>
 
       {/* Main Workspace Layout */}
       <div className="flex-1 flex flex-col md:flex-row min-h-0 relative">
         {/* Sidebar Container */}
         <aside
-          className={`w-full md:w-[380px] md:border-r-2 md:border-[#2B2B23] flex-shrink-0 flex flex-col bg-[#D9D2C0] ${
+          className={`w-full md:w-[380px] md:border-r md:border-[#C6B99A] flex-shrink-0 flex flex-col bg-[#EAE3D0]/60 ${
             mobileView === "list" ? "block" : "hidden md:flex"
           }`}
         >
-          <div className="overflow-y-auto flex-1 px-4 py-5 md:px-6 md:py-5 max-h-[calc(100vh-220px)] md:max-h-[calc(100vh-188px)] space-y-4">
-            <div className="text-[13px] leading-relaxed text-[#5A5A4E] bg-[#E8E2D3] border border-[#B8AD8E] rounded-xl p-3.5 shadow-sm">
-              <strong className="text-[#2B2B23]">{t("howToTitle")}</strong>{" "}
+          <div className="overflow-y-auto flex-1 px-4 py-5 md:px-6 md:py-5 max-h-[calc(100vh-220px)] md:max-h-[calc(100vh-200px)] space-y-4">
+            <div className="relative">
+              <Search
+                size={15}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-[#6D6855]"
+              />
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder={t("search.placeholder")}
+                className="w-full pl-9 pr-3 py-2.5 panel rounded-xl text-[13px] text-[#25271E] placeholder-[#6D6855]/70 focus:outline-none focus:ring-2 focus:ring-[#B28A2E]/50 transition-shadow"
+              />
+            </div>
+
+            <div className="text-[13px] leading-relaxed text-[#3A3C2E] panel rounded-xl p-3.5 border-l-4 border-l-[#B28A2E]">
+              <strong className="text-[#25271E] font-semibold">
+                {t("howToTitle")}
+              </strong>{" "}
               {t("howTo")}
             </div>
 
@@ -207,6 +274,7 @@ function App() {
               onToggleVisited={handleToggleVisited}
               onStopClick={handleStopClick}
               activeCategory={activeCategory}
+              search={search}
             />
           </div>
         </aside>
@@ -228,13 +296,13 @@ function App() {
         </main>
 
         {/* Mobile View Toggle Tabs */}
-        <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#2B2B23] text-[#D9D2C0] rounded-full shadow-lg border border-[#B8AD8E]/20 flex items-center p-1 z-[9999]">
+        <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#20241B] text-[#EAE3D0] rounded-full shadow-lg border border-[#C6B99A]/25 flex items-center p-1 z-[9999]">
           <button
             onClick={() => setMobileView("map")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all ${
               mobileView === "map"
-                ? "bg-[#D9D2C0] text-[#2B2B23] font-bold"
-                : "text-[#D9D2C0]/80"
+                ? "bg-[#B28A2E] text-[#20241B] font-bold"
+                : "text-[#EAE3D0]/80 hover:text-[#EAE3D0]"
             }`}
           >
             <MapIcon size={14} />
@@ -244,8 +312,8 @@ function App() {
             onClick={() => setMobileView("list")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all ${
               mobileView === "list"
-                ? "bg-[#D9D2C0] text-[#2B2B23] font-bold"
-                : "text-[#D9D2C0]/80"
+                ? "bg-[#B28A2E] text-[#20241B] font-bold"
+                : "text-[#EAE3D0]/80 hover:text-[#EAE3D0]"
             }`}
           >
             <ListIcon size={14} />
@@ -255,7 +323,7 @@ function App() {
       </div>
 
       {/* Footer */}
-      <footer className="font-mono text-[10px] text-[#5A5A4E] px-5 py-4 md:px-8 border-t border-[#B8AD8E] bg-[#D9D2C0] z-10 flex flex-col md:flex-row md:justify-between gap-2">
+      <footer className="font-mono text-[10px] text-[#6D6855] px-5 py-4 md:px-8 border-t border-[#C6B99A] texture-paper z-10 flex flex-col md:flex-row md:justify-between gap-2">
         <div>{t("footer.tiles")}</div>
         <div>{t("footer.built")}</div>
       </footer>
