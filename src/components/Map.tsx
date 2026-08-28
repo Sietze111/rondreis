@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import type { Stop } from "./StopList";
 import { StampSvg, COLORS } from "./StampSvg";
+import { DirectionsButton } from "./DirectionsButton";
 import { renderToString } from "react-dom/server";
 
 interface MapProps {
@@ -90,27 +91,39 @@ export const RouteMap: React.FC<MapProps> = ({
               <p className="popup-title font-serif font-extrabold text-[16px] leading-tight text-[#2B2B23]">
                 {i18n.t(`stops.${stop.id}.name`)}
               </p>
-              <span
-                className="popup-badge font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block mt-1"
-                style={{
-                  backgroundColor: `${COLORS[stop.cat]}22`,
-                  color: COLORS[stop.cat],
-                  border: `1px solid ${COLORS[stop.cat]}77`,
-                }}
-              >
-                {i18n.t(`categories.${stop.cat}`)}
-              </span>
+              <div className="flex flex-wrap gap-1.5 mt-1">
+                <span
+                  className="popup-badge font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block"
+                  style={{
+                    backgroundColor: `${COLORS[stop.cat]}22`,
+                    color: COLORS[stop.cat],
+                    border: `1px solid ${COLORS[stop.cat]}77`,
+                  }}
+                >
+                  {i18n.t(`categories.${stop.cat}`)}
+                </span>
+                <span className="popup-date font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-full inline-block bg-[#2B2B23] text-[#E8E2D3]">
+                  {i18n.t(`stops.${stop.id}.date`)}
+                </span>
+              </div>
             </div>
           </div>
-          <p className="popup-blurb text-[13.5px] leading-relaxed text-[#2B2B23] mb-1">
+          <p className="popup-blurb text-[13.5px] leading-relaxed text-[#2B2B23] mb-2">
             {i18n.t(`stops.${stop.id}.blurb`)}
           </p>
+          <div className="popup-context text-[12.5px] leading-relaxed bg-[#2B2B23]/[0.04] border border-[#2B2B23]/15 p-2.5 rounded text-[#2B2B23]">
+            <b className="font-mono text-[10px] uppercase tracking-wider text-[#7A2E2E] block mb-0.5">
+              {i18n.t("popup.history")}
+            </b>
+            {i18n.t(`stops.${stop.id}.context`)}
+          </div>
           <div className="popup-tip text-[12.5px] leading-relaxed bg-[#2B2B23]/5 border-l-4 border-[#2B2B23] p-2.5 rounded mt-2 text-[#5A5A4E]">
             <b className="font-mono text-[10px] uppercase tracking-wider text-[#2B2B23] block mb-0.5">
               {i18n.t("popup.goodToKnow")}
             </b>
             {i18n.t(`stops.${stop.id}.tip`)}
           </div>
+          <DirectionsButton lat={stop.lat} lng={stop.lng} />
         </div>,
       );
 

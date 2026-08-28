@@ -35,227 +35,319 @@
     "count": "{{visited}} / {{total}} locations visited"
   },
   "popup": {
-    "goodToKnow": "Good to know"
+    "goodToKnow": "Good to know",
+    "history": "Historical Context"
+  },
+  "directions": {
+    "go": "Get Directions"
   },
   "stops": {
     "dunkirk": {
       "name": "Dunkirk (Dunkerque)",
+      "date": "26 May – 4 Jun 1940",
       "blurb": "The beach and harbour from which the British Expeditionary Force was evacuated in May 1940.",
+      "context": "Operation Dynamo evacuated some 338,000 Allied soldiers from the beach and harbour as the German army closed in, one of the war's most dramatic rescues.",
       "tip": "Visit the Dunkirk Memorial and the wartime museum on Route des Bains."
     },
     "blockhaus-eperlecques": {
       "name": "Blockhaus d'Éperlecques",
+      "date": "1943–44",
       "blurb": "A giant unfinished Nazi bunker built to launch V-2 rockets at London.",
+      "context": "This huge unfinished concrete bunker was built to launch V-2 rockets at London. It never became operational, but stands as a striking monument to the secret 'V-weapon' campaign.",
       "tip": "Giant concrete slab nicknamed 'the Blockhouse' — allow an hour for the bunker trail."
     },
     "la-coupole": {
       "name": "La Coupole",
+      "date": "1943–44",
       "blurb": "A huge concrete dome originally meant to store V-2 rockets, now a museum.",
+      "context": "A vast concrete dome designed to store, prepare and launch V-2 rockets. Damaged by Allied bombing before completion, it is now a museum of rocket science and the German occupation.",
       "tip": "The planetarium and history centre are worth the visit on a rainy day."
     },
     "batterie-todt": {
       "name": "Batterie Todt",
+      "date": "1942",
       "blurb": "A German coastal battery near Cap Gris-Nez with a massive armoured turret.",
+      "context": "One of Germany's biggest coastal batteries, guarding the Channel with 280 mm guns in the giant Casemate 1 along with a range of smaller casemates.",
       "tip": "Visit the adjacent 1944 museum and climb the dunes for sea views."
     },
     "fortress-mimoyecques": {
       "name": "Fortress of Mimoyecques",
+      "date": "1943–44",
       "blurb": "A secret underground V-3 cannon complex built into the chalk hills.",
+      "context": "A secret underground complex of inclined shafts built to fire V-3 'super-guns' at London. The flat roofs were never finished after heavy bombing.",
       "tip": "The shaft network is reached by lift — very atmospheric underground."
     },
     "fort-de-la-creche": {
       "name": "Fort de la Crèche",
+      "date": "19th c. / WWII",
       "blurb": "A restored 19th-century fort at Cap de la Crèche re-used by the Germans in WWII.",
+      "context": "A 19th-century fort reoccupied and re-armed by the Germans, who added concrete casemates overlooking the approaches to Boulogne.",
       "tip": "Combine with a walk along the clifftop coastal path."
     },
     "musee-39-45-ambleteuse": {
       "name": "Musée 39-45 Ambleteuse",
+      "date": "1939–45",
       "blurb": "A private collection of WWII military objects and memorials at Ambleteuse.",
+      "context": "A private museum of WWII objects, uniforms and weaponry exhibited in the historic Moulin de la Belle-Croix at Ambleteuse.",
       "tip": "Compact collection, great for a quick stop between sites."
     },
     "memorial-caen": {
       "name": "Mémorial de Caen",
+      "date": "Opening 1988",
       "blurb": "Caen's vast museum of WWII and the Battle for Normandy.",
+      "context": "Caen's major museum tells the story of France from the pre-war years through occupation and the Battle of Normandy to peace — ending in a Memorial for Peace.",
       "tip": "Set aside half a day — the Peace Memorial is one of Europe's finest."
     },
     "merville-battery": {
       "name": "Merville Battery",
+      "date": "6 Jun 1944, dawn",
       "blurb": "The fortified German gun battery stormed by British paratroopers before dawn on D-Day.",
+      "context": "British 6th Airborne paratroopers stormed the battery just after midnight on D-Day to stop its guns firing on Sword Beach.",
       "tip": "Live history tours and re-enactments run in summer."
     },
     "pegasus-bridge": {
       "name": "Pegasus Bridge",
+      "date": "6 Jun 1944, 00:16",
       "blurb": "The famous bridge over the Caen canal captured by British glider troops in the first minutes of D-Day.",
+      "context": "Men of the 6th Airborne's glider force captured the bridge over the Caen canal in minutes, the very first action of D-Day.",
       "tip": "The old bridge has been moved next to the new memorial museum."
     },
     "memorial-pegasus": {
       "name": "Pegasus Memorial",
+      "date": "Opened 2000",
       "blurb": "Museum next to Pegasus Bridge telling the story of the glider assault.",
+      "context": "The museum at Bénouville tells the story of the 6th Airborne Division, from glider landings to their vital bridgehead over the Orne.",
       "tip": "See the preserved Horsa glider and the original Pegasus Bridge."
     },
     "ouistreham-atlantic-wall": {
       "name": "Atlantic Wall Museum — Ouistreham",
+      "date": "1944",
       "blurb": "A restored German bunker complex at Sword Beach.",
+      "context": "This restored German anti-aircraft battery at the mouth of the Orne defended the approaches to Ouistreham, at the eastern end of Sword Beach.",
       "tip": "Climb to the top of the 'Riva-Bella' battery for a wide view of the beach."
     },
     "sword-beach": {
       "name": "Sword Beach",
+      "date": "6 Jun 1944",
       "blurb": "The easternmost D-Day landing beach, stormed by the British 3rd Division.",
+      "context": "The easternmost landing beach, stormed by the British 3rd Division, which pushed inland toward Caen with the help of the airborne landings behind the lines.",
       "tip": "Walk the promenade at Ouistreham and visit the D-Day sculpture."
     },
     "juno-beach": {
       "name": "Juno Beach",
+      "date": "6 Jun 1944",
       "blurb": "The Canadian landing beach, later linked up with Commonwealth forces.",
+      "context": "The Canadian landing beach, where the 3rd Canadian Division came ashore under heavy fire and advanced deeper inland than any other sector that day.",
       "tip": "Lovely wide strand; the centre is busy in high summer."
     },
     "juno-beach-centre": {
       "name": "Juno Beach Centre",
+      "date": "Opened 2003",
       "blurb": "Canada's memorial to its role in the Normandy landings.",
+      "context": "Canada's memorial centre at Courseulles-sur-Mer commemorates the Canadians who landed on Juno and the civilians of Normandy.",
       "tip": "Check the guided bunker tour times on arrival."
     },
     "beny-sur-mer-cemetery": {
       "name": "Bény-sur-Mer Canadian War Cemetery",
+      "date": "1944",
       "blurb": "Resting place for nearly 2,000 Commonwealth soldiers, many from Juno Beach.",
+      "context": "Nearly 2,000 Commonwealth soldiers lie here, most of them Canadians killed landing on Juno and in the fighting inland.",
       "tip": "A quiet, moving stop — white crosses in regular rows."
     },
     "hillman-strongpoint": {
       "name": "Hillman Strongpoint",
+      "date": "6 Jun 1944",
       "blurb": "A large German strongpoint near Colleville-Montgomery captured on D-Day.",
+      "context": "A large German command strongpoint near Colleville-Montgomery, a key objective taken on D-Day after heavy close-quarter fighting.",
       "tip": "Free to walk the trenches and bunkers across the fields."
     },
     "gold-beach": {
       "name": "Gold Beach",
+      "date": "6 Jun 1944",
       "blurb": "The central British landing beach, where the Mulberry harbour was built.",
+      "context": "The British 50th Division landed here and took seven kilometres of beachfront, near where the Phoenix caissons of the Mulberry harbour later came ashore.",
       "tip": "Best combined with Arromanches and the Port Winston remains."
     },
     "arromanches": {
       "name": "Arromanches-les-Bains",
+      "date": "Jun–Aug 1944",
       "blurb": "Site of the Mulberry 'Port Winston' artificial harbour.",
+      "context": "Arromanches lay at the heart of 'Port Winston', the Mulberry artificial harbour that let the Allies unload thousands of tons of supplies each day.",
       "tip": "View the concrete caissons from the beach or the clifftop viewpoint."
     },
     "arromanches-360": {
       "name": "Arromanches 360°",
+      "date": "Modern",
       "blurb": "Circular cinema showing archival film of the D-Day landings.",
+      "context": "A panoramic cinema presenting the D-Day landings on nine screens, built next to the remnants of the Mulberry harbour.",
       "tip": "The wide-screen film runs continuously — check show times."
     },
     "longues-sur-mer-battery": {
       "name": "Longues-sur-Mer Battery",
+      "date": "1944",
       "blurb": "A German gun battery on a clifftop, its casemates still intact.",
+      "context": "This German battery of four casemated 150 mm guns sat on the clifftop overlooking Gold Beach; its guns were silenced by shelling the day after D-Day.",
       "tip": "Walk from the car park down to the cliff for the best view."
     },
     "british-normandy-memorial": {
       "name": "British Normandy Memorial",
+      "date": "Opened 2021",
       "blurb": "Memorial to the British soldiers who died in Normandy in summer 1944.",
+      "context": "Ranks of tall columns list over 22,000 names of British service men and women who died in Normandy between D-Day and the end of August 1944.",
       "tip": "The columns list over 20,000 names; very moving at sunset."
     },
     "normandy-american-cemetery": {
       "name": "Normandy American Cemetery",
+      "date": "1944",
       "blurb": "The vast American cemetery above Omaha Beach, overlooking the English Channel.",
+      "context": "Some 9,387 American servicemen rest here overlooking Omaha Beach, their white crosses and stars laid in perfect lines across green lawns.",
       "tip": "Arrive before the guided tours; soften your voice — it is a place of remembrance."
     },
     "overlord-museum": {
       "name": "Overlord Museum",
+      "date": "Opened 2013",
       "blurb": "Museum by Omaha Beach displaying vehicles, uniforms and D-Day objects.",
+      "context": "Displaying tanks, vehicles, uniforms and personal objects, this museum retraces Operation Overlord and the Battle of Normandy around Omaha Beach.",
       "tip": "Near the American cemetery, easy to combine with it."
     },
     "omaha-beach": {
       "name": "Omaha Beach",
+      "date": "6 Jun 1944",
       "blurb": "The 'Bloody Omaha' American landing beach, the hardest-fought on D-Day.",
+      "context": "The bloodiest of the landing beaches, where the US 1st and 29th Divisions met fierce German fire from the bluffs before breaking inland.",
       "tip": "Walk from the memorial down onto the sand for quiet reflection."
     },
     "wn60": {
       "name": "WN60 Strongpoint",
+      "date": "6 Jun 1944",
       "blurb": "One of Omaha Beach's German defensive positions, opposite the American cemetery.",
+      "context": "A German strongpoint above the beach whose positions faced the American cemetery headland; its defences were among those the Americans had to silence.",
       "tip": "Look for the remains in the dunes near the beach."
     },
     "wn62": {
       "name": "WN62 Strongpoint",
+      "date": "6 Jun 1944",
       "blurb": "Famous German emplacement at Omaha that fired on the first landing waves.",
+      "context": "From this emplacement German troops fired on the first waves at Omaha; it has become the best-known symbol of the beach's deadly defences.",
       "tip": "Interpretation boards explain the D-Day morning hour by hour."
     },
     "d-day-omaha-museum": {
       "name": "D-Day Omaha Museum",
+      "date": "1860s mill / WWII",
       "blurb": "A collection of Omaha Beach war relics in Vierville-sur-Mer.",
+      "context": "A private collection in Vierville-sur-Mer of weapons, vehicles and personal items recovered from Omaha Beach.",
       "tip": "Small private museum with wreckage and personal items."
     },
     "pointe-du-hoc": {
       "name": "Pointe du Hoc",
+      "date": "6 Jun 1944",
       "blurb": "The dramatic clifftop stormed by US Rangers, still pockmarked with craters.",
+      "context": "US Rangers scaled the 30-metre cliff under fire to destroy heavy guns, finding them withdrawn; the headland remains cratered by the bombardment.",
       "tip": "Walk the battle-scarred headland and see the surviving gun casemates."
     },
     "la-cambe-german-cemetery": {
       "name": "La Cambe German War Cemetery",
+      "date": "1944",
       "blurb": "Germany's largest military cemetery in Normandy, with over 21,000 graves.",
+      "context": "More than 21,000 German soldiers are buried here, marked by dark stone crosses in a peaceful grove — a sombre counterpart to the other Normandy cemeteries.",
       "tip": "The contrast with the American cemetery is quietly thought-provoking."
     },
     "airborne-museum": {
       "name": "Airborne Museum — Sainte-Mère-Église",
+      "date": "Opened 1960s",
       "blurb": "Museum in Sainte-Mère-Église dedicated to the US airborne landings.",
+      "context": "In Sainte-Mère-Église, the museum honours the US 82nd and 101st Airborne, telling of the night drop that preceded the seaborne landings.",
       "tip": "See the C-47 'Douglas' and the story of the famous parachute on the church tower."
     },
     "sainte-mere-eglise": {
       "name": "Sainte-Mère-Église",
+      "date": "6 Jun 1944",
       "blurb": "One of the first towns liberated, parachuted into by US airborne troops.",
+      "context": "One of the first towns liberated in Europe, taken by US paratroopers in the small hours — a parachute still hangs from its church tower.",
       "tip": "Spot the parachute hanging from the church steeple."
     },
     "utah-beach": {
       "name": "Utah Beach",
+      "date": "6 Jun 1944",
       "blurb": "The westernmost landing beach — the 4th US Division landed here at H-Hour.",
+      "context": "The westernmost landing beach; the US 4th Division came ashore here and linked up with the airborne troops inland faster than expected.",
       "tip": "Long open beach; the monument and dunes are worth the walk."
     },
     "utah-beach-museum": {
       "name": "Utah Beach Museum",
+      "date": "Opened 1994",
       "blurb": "Museum at the actual landing site by the water's edge.",
+      "context": "Located at the actual landing site, the museum occupies a restored control post and retells the Utah landing through film and objects.",
       "tip": "Views across the beach from the landing-craft setting are powerful."
     },
     "azeville-battery": {
       "name": "Azeville Battery",
+      "date": "1944",
       "blurb": "A well-preserved German coastal battery inland from Utah Beach.",
+      "context": "A German coastal battery re-used after D-Day; its surviving bunkers and passages now offer guided visits showing how the garrison lived.",
       "tip": "Guided tours explore the dark underground passages."
     },
     "la-fiere": {
       "name": "La Fière",
+      "date": "6–9 Jun 1944",
       "blurb": "Site of intense fighting over the causeway bridge held by American paratroopers.",
+      "context": "At the causeway bridge over the Merderet, US paratroopers held off a German counterattack in some of the fiercest fighting of the airborne campaign.",
       "tip": "The bridge and the Iron Mike monument mark a key D-Day crossroads."
     },
     "dead-mans-corner": {
       "name": "Dead Man's Corner Museum",
+      "date": "Jun 1944",
       "blurb": "Museum at a famous crossroads tenement fought over by airborne troops.",
+      "context": "At this crossroads near Carentan, named for a paratrooper found there, airborne troops fought intense close-quarters battles in June 1944.",
       "tip": "Interesting private collection in the original building."
     },
     "carentan": {
       "name": "Carentan",
+      "date": "10–12 Jun 1944",
       "blurb": "Strategic town captured by the 101st Airborne, key to joining the beachheads.",
+      "context": "Captured by the 101st Airborne after days of street fighting, Carentan joined the Utah and Omaha beachheads into a single front.",
       "tip": "Walk the town centre and see the church of Notre-Dame."
     },
     "normandy-victory-museum": {
       "name": "Normandy Victory Museum",
+      "date": "Opened 2014",
       "blurb": "Museum at Carentan covering the full Battle of Normandy.",
+      "context": "At Carentan, large dioramas with life-size figures and vehicles retell the whole Battle of Normandy from D-Day to the liberation of Paris.",
       "tip": "Large set-piece dioramas with life-size soldiers and vehicles."
     },
     "bayeux-battle-of-normandy-museum": {
       "name": "Bayeux Battle of Normandy Museum",
+      "date": "Opened 1988",
       "blurb": "Museum of the British side of the Battle of Normandy.",
+      "context": "This museum examines the war from the British perspective, following Commonwealth forces from D-Day to the crossing of the Seine.",
       "tip": "Combine with the nearby Bayeux Tapestry if you have time."
     },
     "bayeux-war-cemetery": {
       "name": "Bayeux War Cemetery",
+      "date": "1944",
       "blurb": "The largest Commonwealth cemetery in France, with over 4,000 graves.",
+      "context": "The largest Commonwealth war cemetery in France holds over 4,000 graves, mostly British soldiers who died in the Battle of Normandy.",
       "tip": "Peaceful and impeccably tended; a short walk from the town centre."
     },
     "saint-lo": {
       "name": "Saint-Lô",
+      "date": "7–18 Jul 1944",
       "blurb": "A key crossroads town, heavily destroyed and fought over in July 1944.",
+      "context": "The crossroads town of Saint-Lô was fought over street by street in Operation Cobra's opening days and largely reduced to rubble.",
       "tip": "See the 'Moon Over Normandy' sculpture in the town centre."
     },
     "montormel-memorial": {
       "name": "Montormel Memorial",
+      "date": "Aug 1944",
       "blurb": "A memorial at the site of the closing of the Falaise pocket.",
+      "context": "High above the Dives, this memorial marks the closing of the Falaise pocket, where the encircled German army was trapped and destroyed.",
       "tip": "The diorama explains the encirclement of the German army."
     },
     "falaise-pocket": {
       "name": "Falaise Pocket",
+      "date": "12–21 Aug 1944",
       "blurb": "The battlefield where the German army was encircled and destroyed in August 1944.",
+      "context": "In the pocket between Falaise and Argentan, the German armies were surrounded by the Allies; tens of thousands were killed or captured in the mop-up.",
       "tip": "Drive the country lanes to grasp the scale of the encirclement."
     }
   }

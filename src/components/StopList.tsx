@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { StampSvg, COLORS } from "./StampSvg";
+import { DirectionsButton } from "./DirectionsButton";
 
 export interface Stop {
   id: string;
@@ -98,20 +99,23 @@ export const StopList: React.FC<StopListProps> = ({
                       </p>
                     </div>
 
-                    <button
-                      type="button"
-                      title={t("stopList.markVisited")}
-                      onClick={(e) => onToggleVisited(stop.id, e)}
-                      className={`w-[19px] h-[19px] rounded-full border border-[#2B2B23] flex-shrink-0 mt-0.5 flex items-center justify-center transition-all ${
-                        isVisited ? "bg-[#2B2B23]" : "hover:bg-[#2B2B23]/5"
-                      }`}
-                    >
-                      {isVisited && (
-                        <span className="text-[#E8E2D3] text-[10px] leading-none font-bold">
-                          ✓
-                        </span>
-                      )}
-                    </button>
+                    <div className="flex items-center gap-1.5 flex-shrink-0 mt-0.5">
+                      <DirectionsButton lat={stop.lat} lng={stop.lng} size="sm" />
+                      <button
+                        type="button"
+                        title={t("stopList.markVisited")}
+                        onClick={(e) => onToggleVisited(stop.id, e)}
+                        className={`w-[19px] h-[19px] rounded-full border border-[#2B2B23] flex items-center justify-center transition-all ${
+                          isVisited ? "bg-[#2B2B23]" : "hover:bg-[#2B2B23]/5"
+                        }`}
+                      >
+                        {isVisited && (
+                          <span className="text-[#E8E2D3] text-[10px] leading-none font-bold">
+                            ✓
+                          </span>
+                        )}
+                      </button>
+                    </div>
                   </div>
                 );
               })}
