@@ -82,21 +82,20 @@ export const StopList: React.FC<StopListProps> = ({
 
         return (
           <div key={cat} className="mt-1">
-            <div className="flex items-center gap-2 pb-2 mb-1">
+            <div className="flex items-center gap-2 pb-2 mb-2">
               <span
-                className="w-3 h-3 rotate-45 border border-[#25271E]/60"
-                style={{ backgroundColor: COLORS[cat] }}
+                className="w-4 h-4 border-2 border-[#161616] rotate-[-8deg]"
+                style={{ backgroundColor: COLORS[cat], boxShadow: "2px 2px 0 #161616" }}
               />
-              <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-[#25271E]">
+              <h3 className="font-display text-base font-bold uppercase tracking-wide text-[#161616]">
                 {t(`categories.${cat}`)}
               </h3>
-              <span className="h-px flex-1 bg-[#C6B99A]" />
-              <span className="font-mono text-[10px] text-[#6D6855]">
+              <span className="font-mono text-xs font-bold text-[#161616] bg-[#F5C400] border-2 border-[#161616] px-1.5 leading-tight">
                 {catStops.length}
               </span>
             </div>
 
-            <div className="space-y-1.5">
+            <div className="space-y-2.5">
               {catStops.map((stop) => {
                 const isVisited = visited.has(stop.id);
 
@@ -104,35 +103,32 @@ export const StopList: React.FC<StopListProps> = ({
                   <div
                     key={stop.id}
                     onClick={() => onStopClick(stop)}
-                    className="flex gap-3 items-start p-2.5 rounded-lg cursor-pointer border border-transparent transition-all duration-150 hover:border-[#C6B99A] hover:bg-[#F3EDDE] hover:shadow-[0_4px_14px_-4px_rgba(32,36,27,0.35)]"
+                    className="flex gap-3 items-start border-[3px] border-[#161616] bg-[#FFFFFF] cursor-pointer transition-all duration-100 hover:shadow-[4px_4px_0_#161616] p-2.5"
+                    style={{
+                      opacity: isVisited ? 0.65 : 1,
+                    }}
                   >
-                    <div className="w-9 h-9 flex-shrink-0 mt-0.5">
-                      <StampSvg cat={stop.cat} glyph={stop.glyph} size={36} />
+                    <div className="w-10 h-10 flex-shrink-0 mt-0.5">
+                      <StampSvg cat={stop.cat} glyph={stop.glyph} size={40} />
                     </div>
 
                     <div className="flex-1 min-w-0">
                       <p
-                        className={`font-serif font-bold text-[15.5px] leading-tight text-[#25271E] ${
-                          isVisited ? "opacity-40 line-through" : ""
+                        className={`font-sans font-bold text-[15px] leading-tight text-[#161616] ${
+                          isVisited ? "line-through decoration-[#E33D2E] decoration-2" : ""
                         }`}
                       >
                         {t(`stops.${stop.id}.name`)}
                       </p>
-                      <p
-                        className={`mt-0.5 font-mono text-[10.5px] uppercase tracking-wider text-[#6D6855] ${
-                          isVisited ? "opacity-40" : ""
-                        }`}
-                      >
+                      <p className="mt-0.5 font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#6B6453]">
                         {stop.area}
                       </p>
                       {t(`stops.${stop.id}.hours`) &&
                         t(`stops.${stop.id}.hours`) !== `stops.${stop.id}.hours` && (
-                          <p
-                            className={`mt-1 text-[11px] text-[#3A3C2E]/80 flex items-center gap-1 ${
-                              isVisited ? "opacity-40" : ""
-                            }`}
-                          >
-                            <Clock size={11} className="text-[#B28A2E]" />
+                          <p className="mt-1 text-[11.5px] font-medium text-[#161616] flex items-center gap-1.5">
+                            <span className="w-3.5 h-3.5 bg-[#E89B1F] border border-[#161616] flex items-center justify-center">
+                              <Clock size={9} className="text-white" />
+                            </span>
                             {t(`stops.${stop.id}.hours`)}
                           </p>
                         )}
@@ -144,14 +140,13 @@ export const StopList: React.FC<StopListProps> = ({
                         type="button"
                         title={t("stopList.markVisited")}
                         onClick={(e) => onToggleVisited(stop.id, e)}
-                        className={`w-[20px] h-[20px] rounded-full border flex items-center justify-center transition-all press ${
-                          isVisited
-                            ? "bg-[#7C2B2B] border-[#7C2B2B] text-[#F3EDDE]"
-                            : "border-[#25271E]/60 hover:bg-[#25271E]/10"
-                        }`}
+                        className="w-6 h-6 border-[3px] border-[#161616] flex items-center justify-center transition-colors press cursor-pointer"
+                        style={{
+                          backgroundColor: isVisited ? "#2E9E4F" : "#FFFFFF",
+                        }}
                       >
                         {isVisited && (
-                          <span className="text-[10px] leading-none font-bold">
+                          <span className="text-white text-sm leading-none font-bold">
                             ✓
                           </span>
                         )}

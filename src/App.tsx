@@ -23,16 +23,16 @@ const CATEGORY_IDS = [
 ] as const;
 
 const CATEGORY_COLORS: Record<(typeof CATEGORY_IDS)[number], string> = {
-  all: "#2B2B23",
-  battlefield: "#7A4232",
-  bunker: "#5A6042",
-  battery: "#A0721F",
-  fort: "#4C5A56",
-  museum: "#8A3434",
-  memorial: "#5E4A6E",
-  cemetery: "#5C5750",
-  bridge: "#3B5A6E",
-  beach: "#B08D3E",
+  all: "#161616",
+  battlefield: "#E33D2E",
+  bunker: "#5C6B3F",
+  battery: "#E89B1F",
+  fort: "#4C86C6",
+  museum: "#B3271B",
+  memorial: "#7B4DC0",
+  cemetery: "#4A4A48",
+  bridge: "#2E6BD6",
+  beach: "#E8A33D",
 };
 
 interface BeforeInstallPromptEvent extends Event {
@@ -115,110 +115,68 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen texture-paper text-[#25271E] font-sans antialiased">
-      {/* Header / Masthead */}
-      <header className="relative overflow-hidden bg-[#20241B] text-[#EAE3D0]">
-        {/* texture + glow layers */}
-        <div
-          className="absolute inset-0 texture-topo opacity-70"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0"
-          aria-hidden
-          style={{
-            background:
-              "radial-gradient(60% 100% at 12% 0%, rgba(124,43,43,0.42), transparent 70%), radial-gradient(55% 120% at 92% 10%, rgba(178,138,46,0.22), transparent 70%)",
-          }}
-        />
-        {/* brass top accent */}
-        <div className="relative h-[3px] bg-gradient-to-r from-[#7C2B2B] via-[#B28A2E] to-[#7C2B2B]" />
+    <div className="flex flex-col h-dvh overflow-hidden bg-[#F4EFE2] text-[#161616] font-sans antialiased">
+      {/* Header / Masthead (compact) */}
+      <header className="shrink-0 bg-[#F4EFE2] border-b-4 border-[#161616]">
+        <div className="h-1.5 bg-[#F5C400] border-b-2 border-[#161616]" />
 
-        <div className="relative max-w-7xl mx-auto px-5 py-8 md:px-8 md:py-10">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="min-w-0">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="font-mono text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-[#CAA75A] font-semibold">
-                  {t("subtitle")}
-                </span>
-                <span className="hidden sm:block w-16 h-px bg-[#B28A2E]/50" />
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-2.5 md:py-3">
+          {/* Brand row */}
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <span className="sticker bg-[#E33D2E] text-white font-display text-sm px-2 py-1 hidden sm:inline-block">
+                1944
+              </span>
+              <div className="min-w-0">
+                <h1 className="font-display text-[22px] md:text-3xl uppercase leading-[1.02] tracking-tight text-[#161616] whitespace-nowrap">
+                  <span className="bg-[#F5C400] px-1">France</span> War Trails
+                </h1>
+                <p className="font-mono text-[9px] md:text-[10px] font-bold uppercase tracking-[0.14em] text-[#6B6453] truncate">
+                  {t("subtitle")} · Dunkirk → Normandy · Iepe &amp; Sietze
+                </p>
               </div>
-
-              <h1 className="font-display text-4xl md:text-6xl font-bold uppercase leading-[0.95] tracking-[0.02em] text-[#F3EDDE] [text-shadow:0_2px_18px_rgba(0,0,0,0.45)]">
-                {t("title")}
-              </h1>
-
-              <div className="mt-4 rule-brass w-28 md:w-40" />
-
-              <p className="mt-4 max-w-2xl font-serif italic text-[15px] md:text-[17px] leading-relaxed text-[#D8D0B8]">
-                {t("description")}
-              </p>
             </div>
 
-            {/* Right cluster: seal + controls */}
-            <div className="flex flex-col items-start md:items-end gap-4">
-              {/* Regimental seal */}
-              <div className="hidden md:flex items-center gap-4">
-                <div className="reveal w-16 h-16 rounded-full border-2 border-[#B28A2E]/70 flex items-center justify-center rotate-[-6deg] bg-[#2A2E22]/80 shadow-[0_8px_20px_rgba(0,0,0,0.4)]">
-                  <span className="font-display text-[11px] leading-tight text-center text-[#CAA75A] uppercase px-1">
-                    44<br />Remember
-                  </span>
-                </div>
-                <div className="hidden sm:block">
-                  <p className="font-mono text-[13px] tracking-[0.2em] uppercase text-[#D8D0B8]">
-                    Dunkirk · Normandy
-                  </p>
-                  <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#B28A2E] mt-1">
-                    Iepe &amp; Sietze
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 self-start md:self-auto">
-                <LanguagePicker />
-                {deferredPrompt && (
-                  <button
-                    onClick={handleInstallClick}
-                    className="press bg-[#7C2B2B] text-[#F3EDDE] border border-[#B28A2E]/60 hover:bg-[#8F3333] rounded-full px-5 py-2 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 font-bold cursor-pointer shadow-[0_6px_16px_rgba(0,0,0,0.35)]"
-                  >
-                    <Download size={14} />
-                    {t("install")}
-                  </button>
-                )}
-              </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <LanguagePicker />
+              {deferredPrompt && (
+                <button
+                  onClick={handleInstallClick}
+                  className="brutal-btn bg-[#E33D2E] text-white px-3 py-1.5 md:px-4 font-mono text-[11px] md:text-[12px] font-bold tracking-wider flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Download size={13} />
+                  <span className="hidden sm:inline">{t("install")}</span>
+                </button>
+              )}
             </div>
           </div>
 
           {/* Filter Chips */}
-          <div className="flex gap-2 flex-wrap mt-7">
+          <div className="flex gap-1.5 flex-nowrap md:flex-wrap mt-2 overflow-x-auto md:overflow-visible pb-0.5 -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar">
             {CATEGORY_IDS.map((categoryId) => {
               const active = activeCategory === categoryId;
               const color =
-                categoryId === "all" ? "#B28A2E" : CATEGORY_COLORS[categoryId];
+                categoryId === "all"
+                  ? "#161616"
+                  : CATEGORY_COLORS[categoryId];
 
               return (
                 <button
                   key={categoryId}
                   onClick={() => setActiveCategory(categoryId)}
-                  className="press border rounded-full pl-2.5 pr-4 py-1.5 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 text-[#D8D0B8] hover:-translate-y-0.5 cursor-pointer"
+                  className="brutal-btn font-mono text-[11px] font-bold tracking-wide px-2 py-1 flex items-center gap-1.5 cursor-pointer"
                   style={{
-                    borderColor: active ? color : "rgba(216,208,184,0.35)",
-                    backgroundColor: active
-                      ? color
-                      : "rgba(234,227,208,0.06)",
-                    color: active ? "#fff" : "#D8D0B8",
-                    boxShadow: active
-                      ? "0 6px 16px -4px rgba(0,0,0,0.5)"
-                      : "none",
+                    backgroundColor: active ? color : "#FFFFFF",
+                    color: active ? "#FFFFFF" : "#161616",
                   }}
                 >
                   <span
                     className="w-2 h-2 rounded-full"
                     style={{
                       backgroundColor: active
-                        ? "#fff"
+                        ? "#FFFFFF"
                         : categoryId === "all"
-                          ? "#D8D0B8"
+                          ? "#161616"
                           : COLORS[categoryId as keyof typeof COLORS],
                     }}
                   />
@@ -228,39 +186,33 @@ function App() {
             })}
           </div>
         </div>
-
-        {/* notched bottom divider */}
-        <div className="relative h-[3px] ticks opacity-70" />
       </header>
 
       {/* Main Workspace Layout */}
       <div className="flex-1 flex flex-col md:flex-row min-h-0 relative">
         {/* Sidebar Container */}
         <aside
-          className={`w-full md:w-[380px] md:border-r md:border-[#C6B99A] flex-shrink-0 flex flex-col bg-[#EAE3D0]/60 ${
-            mobileView === "list" ? "block" : "hidden md:flex"
+          className={`w-full md:w-[380px] md:flex-none md:border-r-4 md:border-[#161616] flex-1 min-h-0 flex-col bg-[#F4EFE2] ${
+            mobileView === "list" ? "flex" : "hidden md:flex"
           }`}
         >
-          <div className="overflow-y-auto flex-1 px-4 py-5 md:px-6 md:py-5 max-h-[calc(100vh-220px)] md:max-h-[calc(100vh-200px)] space-y-4">
+          <div className="overflow-y-auto flex-1 min-h-0 px-4 py-4 md:px-6 space-y-4">
+            <p className="font-sans text-[12.5px] font-medium leading-relaxed text-[#161616] bg-[#FFFFFF] border-[2px] border-[#161616] p-2.5 shadow-[2px_2px_0_#161616]">
+              {t("description")}
+            </p>
+
             <div className="relative">
               <Search
-                size={15}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-[#6D6855]"
+                size={16}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-[#161616]"
               />
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder={t("search.placeholder")}
-                className="w-full pl-9 pr-3 py-2.5 panel rounded-xl text-[13px] text-[#25271E] placeholder-[#6D6855]/70 focus:outline-none focus:ring-2 focus:ring-[#B28A2E]/50 transition-shadow"
+                className="w-full pl-9 pr-3 py-2.5 border-[3px] border-[#161616] shadow-[3px_3px_0_#161616] bg-[#FFFFFF] text-[14px] font-medium text-[#161616] placeholder-[#6B6453] focus:outline-none focus:bg-[#F5C400]"
               />
-            </div>
-
-            <div className="text-[13px] leading-relaxed text-[#3A3C2E] panel rounded-xl p-3.5 border-l-4 border-l-[#B28A2E]">
-              <strong className="text-[#25271E] font-semibold">
-                {t("howToTitle")}
-              </strong>{" "}
-              {t("howTo")}
             </div>
 
             <ProgressBar
@@ -281,8 +233,8 @@ function App() {
 
         {/* Map Container */}
         <main
-          className={`flex-1 flex flex-col min-h-[50vh] md:min-h-0 relative ${
-            mobileView === "map" ? "block" : "hidden md:block"
+          className={`flex-1 flex flex-col min-h-0 relative ${
+            mobileView === "map" ? "flex" : "hidden md:flex"
           }`}
         >
           <div className="absolute inset-0 w-full h-full">
@@ -296,13 +248,11 @@ function App() {
         </main>
 
         {/* Mobile View Toggle Tabs */}
-        <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#20241B] text-[#EAE3D0] rounded-full shadow-lg border border-[#C6B99A]/25 flex items-center p-1 z-[9999]">
+        <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#FFFFFF] border-[3px] border-[#161616] shadow-[4px_4px_0_#161616] flex items-center p-1 z-[9999]">
           <button
             onClick={() => setMobileView("map")}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all ${
-              mobileView === "map"
-                ? "bg-[#B28A2E] text-[#20241B] font-bold"
-                : "text-[#EAE3D0]/80 hover:text-[#EAE3D0]"
+            className={`flex items-center gap-1.5 px-4 py-2 font-mono text-xs font-bold tracking-wider transition-colors ${
+              mobileView === "map" ? "bg-[#161616] text-[#F5C400]" : "text-[#161616]"
             }`}
           >
             <MapIcon size={14} />
@@ -310,10 +260,8 @@ function App() {
           </button>
           <button
             onClick={() => setMobileView("list")}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all ${
-              mobileView === "list"
-                ? "bg-[#B28A2E] text-[#20241B] font-bold"
-                : "text-[#EAE3D0]/80 hover:text-[#EAE3D0]"
+            className={`flex items-center gap-1.5 px-4 py-2 font-mono text-xs font-bold tracking-wider transition-colors ${
+              mobileView === "list" ? "bg-[#161616] text-[#F5C400]" : "text-[#161616]"
             }`}
           >
             <ListIcon size={14} />
@@ -322,10 +270,10 @@ function App() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="font-mono text-[10px] text-[#6D6855] px-5 py-4 md:px-8 border-t border-[#C6B99A] texture-paper z-10 flex flex-col md:flex-row md:justify-between gap-2">
-        <div>{t("footer.tiles")}</div>
-        <div>{t("footer.built")}</div>
+      {/* Footer (slim) */}
+      <footer className="shrink-0 font-mono text-[10px] font-bold text-[#161616] px-4 md:px-6 py-1.5 border-t-2 border-[#161616] bg-[#F4EFE2] z-10 flex flex-col sm:flex-row sm:justify-between gap-1">
+        <span className="truncate">{t("footer.tiles")}</span>
+        <span>{t("footer.built")}</span>
       </footer>
     </div>
   );

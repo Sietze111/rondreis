@@ -7,10 +7,10 @@ export function LanguagePicker() {
     <select
       value={i18n.resolvedLanguage}
       onChange={(e) => i18n.changeLanguage(e.target.value)}
-      className="rounded-full border border-[#B28A2E]/50 bg-[#2A2E22] px-3 py-2 text-sm text-[#D8D0B8] font-mono text-xs tracking-wider cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B28A2E]/50 appearance-none text-center min-w-[110px]"
+      className="font-mono text-xs font-bold tracking-wider cursor-pointer border-[3px] border-[#161616] bg-[#FFFFFF] px-3 py-2 shadow-[3px_3px_0_#161616] focus:outline-none focus:bg-[#F5C400] text-[#161616] appearance-none text-center min-w-[120px]"
     >
-      <option value="nl" className="bg-[#20241B]">🇳🇱 Nederlands</option>
-      <option value="en" className="bg-[#20241B]">🇬🇧 English</option>
+      <option value="nl" className="bg-white">🇳🇱 Nederlands</option>
+      <option value="en" className="bg-white">🇬🇧 English</option>
     </select>
   );
 }

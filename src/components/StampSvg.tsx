@@ -55,15 +55,16 @@ export const GLYPHS: Record<string, string> = {
 };
 
 export const COLORS = {
-  battlefield: "#7A4232",
-  bunker: "#5A6042",
-  museum: "#8A3434",
-  battery: "#A0721F",
-  fort: "#4C5A56",
-  bridge: "#3B5A6E",
-  beach: "#B08D3E",
-  cemetery: "#5C5750",
-  memorial: "#5E4A6E",
+  battlefield: "#E33D2E",
+  bunker: "#5C6B3F",
+  museum: "#B3271B",
+  battery: "#E89B1F",
+  fort: "#4C86C6",
+  bridge: "#2E6BD6",
+  beach: "#E8A33D",
+  cemetery: "#4A4A48",
+  memorial: "#7B4DC0",
+  all: "#161616",
 };
 
 export const CAT_LABEL = {
@@ -85,71 +86,34 @@ interface StampSvgProps {
 }
 
 export const StampSvg: React.FC<StampSvgProps> = ({ cat, glyph, size }) => {
-  const uid = React.useId();
-  const gid = `paper-${cat}-${uid.replace(/[^a-zA-Z0-9]/g, "")}`;
   const color = COLORS[cat];
   const glyphMarkup = GLYPHS[glyph] || "";
 
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" className="select-none">
-      <defs>
-        <radialGradient id={gid} cx="38%" cy="30%" r="90%">
-          <stop offset="0%" stopColor="#F7F1E2" />
-          <stop offset="60%" stopColor="#ECE4CF" />
-          <stop offset="100%" stopColor="#D9CEB2" />
-        </radialGradient>
-      </defs>
-
-      {/* Paper disc */}
+      {/* Flat category disc */}
+      <circle cx="32" cy="32" r="30" fill={color} />
+      {/* Thick outer ink ring */}
+      <circle cx="32" cy="32" r="30" fill="none" stroke="#161616" strokeWidth="3" />
+      {/* Inner white halo ring */}
       <circle
         cx="32"
         cy="32"
-        r="30"
-        fill={`url(#${gid})`}
-      />
-
-      {/* Perforated postage edge */}
-      <circle
-        cx="32"
-        cy="32"
-        r="29.2"
+        r="26"
         fill="none"
-        stroke="#40301a"
-        strokeOpacity="0.85"
+        stroke="#FFFFFF"
         strokeWidth="1.6"
-        strokeDasharray="2.6 3.1"
       />
-
-      {/* Brass inner ring */}
-      <circle
-        cx="32"
-        cy="32"
-        r="24.4"
-        fill="none"
-        stroke="#B28A2E"
-        strokeWidth="1"
-        strokeDasharray="2 5"
-        opacity="0.9"
-      />
-
-      {/* Category ring */}
-      <circle
-        cx="32"
-        cy="32"
-        r="22.4"
-        fill="none"
-        stroke={color}
-        strokeWidth="1.4"
-        opacity="0.95"
-      />
-
+      {/* Glyph in white on the fill */}
       <g
         fill="none"
-        stroke={color}
-        strokeWidth="1.9"
+        stroke="#FFFFFF"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       >
+        <circle cx="32" cy="32" r="21" stroke="#161616" strokeWidth="1.4" />
+        <circle cx="32" cy="32" r="21" fill="none" strokeWidth="0" />
         <g dangerouslySetInnerHTML={{ __html: glyphMarkup }} />
       </g>
     </svg>
