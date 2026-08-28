@@ -387,4 +387,154 @@ export const STOPS: Stop[] = [
     lng: -0.18,
     glyph: "battlefield",
   },
+
+  // ─────────────────────────────────────────────
+  // WWI — YPRES SALIENT (BELGIUM)
+  // ─────────────────────────────────────────────
+
+  {
+    id: "menin-gate",
+    area: "Ypres",
+    cat: "memorial",
+    lat: 50.852,
+    lng: 2.891,
+    glyph: "memorial",
+    war: "ww1",
+  },
+  {
+    id: "in-flanders-fields-museum",
+    area: "Ypres",
+    cat: "museum",
+    lat: 50.8512,
+    lng: 2.8855,
+    glyph: "museum",
+    war: "ww1",
+  },
+  {
+    id: "essex-farm-cemetery",
+    area: "Ypres",
+    cat: "cemetery",
+    lat: 50.8957,
+    lng: 2.868,
+    glyph: "cemetery",
+    war: "ww1",
+  },
+  {
+    id: "hill-60",
+    area: "Zillebeke",
+    cat: "battlefield",
+    lat: 50.822,
+    lng: 2.933,
+    glyph: "battlefield",
+    war: "ww1",
+  },
+  {
+    id: "tyne-cot-cemetery",
+    area: "Passchendaele",
+    cat: "cemetery",
+    lat: 50.8885,
+    lng: 2.9995,
+    glyph: "cemetery",
+    war: "ww1",
+  },
+  {
+    id: "passchendaele-museum",
+    area: "Zonnebeke",
+    cat: "museum",
+    lat: 50.8735,
+    lng: 2.9935,
+    glyph: "museum",
+    war: "ww1",
+  },
+  {
+    id: "langemark-cemetery",
+    area: "Langemark",
+    cat: "cemetery",
+    lat: 50.917,
+    lng: 2.916,
+    glyph: "cemetery",
+    war: "ww1",
+  },
+  {
+    id: "polygon-wood",
+    area: "Zonnebeke",
+    cat: "battlefield",
+    lat: 50.855,
+    lng: 3.001,
+    glyph: "battlefield",
+    war: "ww1",
+  },
+
+  // ─────────────────────────────────────────────
+  // WWI — ARRAS / SOMME (FRANCE)
+  // ─────────────────────────────────────────────
+
+  {
+    id: "vimy-ridge",
+    area: "Givenchy-en-Gohelle",
+    cat: "memorial",
+    lat: 50.3785,
+    lng: 2.773,
+    glyph: "memorial",
+    war: "ww1",
+  },
+  {
+    id: "thiepval-memorial",
+    area: "Thiepval",
+    cat: "memorial",
+    lat: 50.0508,
+    lng: 2.6859,
+    glyph: "memorial",
+    war: "ww1",
+  },
+  {
+    id: "beaumont-hamel",
+    area: "Beaumont-Hamel",
+    cat: "battlefield",
+    lat: 50.0736,
+    lng: 2.65,
+    glyph: "battlefield",
+    war: "ww1",
+  },
+  {
+    id: "lochnagar-crater",
+    area: "La Boisselle",
+    cat: "battlefield",
+    lat: 50.0183,
+    lng: 2.697,
+    glyph: "battlefield",
+    war: "ww1",
+  },
+  {
+    id: "notre-dame-de-lorette",
+    area: "Ablain-Saint-Nazaire",
+    cat: "memorial",
+    lat: 50.4,
+    lng: 2.705,
+    glyph: "memorial",
+    war: "ww1",
+  },
+
+  // ─────────────────────────────────────────────
+  // WWI — COMPIÈGNE / VERDUN
+  // ─────────────────────────────────────────────
+
+  {
+    id: "compiegne-armistice",
+    area: "Compiègne",
+    cat: "memorial",
+    lat: 49.4271,
+    lng: 2.9075,
+    glyph: "memorial",
+    war: "ww1",
+  },
+  {
+    id: "douaumont-ossuary",
+    area: "Verdun",
+    cat: "memorial",
+    lat: 49.2066,
+    lng: 5.4251,
+    glyph: "memorial",
+    war: "ww1",
+  },
 ];

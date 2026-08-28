@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { StampSvg, COLORS } from "./StampSvg";
 import { DirectionsButton } from "./DirectionsButton";
+import { StayButton } from "./StayButton";
 import { Clock } from "lucide-react";
 
 export interface Stop {
@@ -20,6 +21,7 @@ export interface Stop {
   lat: number;
   lng: number;
   glyph: string;
+  war?: "ww1" | "ww2";
 }
 
 interface StopListProps {
@@ -28,6 +30,7 @@ interface StopListProps {
   onToggleVisited: (id: string, e: React.MouseEvent) => void;
   onStopClick: (stop: Stop) => void;
   activeCategory: string;
+  activeWar: string;
   search: string;
 }
 
@@ -49,10 +52,16 @@ export const StopList: React.FC<StopListProps> = ({
   onToggleVisited,
   onStopClick,
   activeCategory,
+  activeWar,
   search,
 }) => {
   const { t } = useTranslation();
   const query = search.trim().toLowerCase();
+
+  const matchesWar = (stop: Stop) => {
+    if (activeWar === "all") return true;
+    return (stop.war ?? "ww2") === activeWar;
+  };
 
   const matchesSearch = (stop: Stop) => {
     if (!query) return true;
@@ -74,7 +83,7 @@ export const StopList: React.FC<StopListProps> = ({
         }
 
         const catStops = stops.filter(
-          (s) => s.cat === cat && matchesSearch(s),
+          (s) => s.cat === cat && matchesWar(s) && matchesSearch(s),
         );
         if (catStops.length === 0) {
           return null;
@@ -135,6 +144,7 @@ export const StopList: React.FC<StopListProps> = ({
                     </div>
 
                     <div className="flex items-center gap-1.5 flex-shrink-0 mt-0.5">
+                      <StayButton lat={stop.lat} lng={stop.lng} area={stop.area} size="sm" />
                       <DirectionsButton lat={stop.lat} lng={stop.lng} size="sm" />
                       <button
                         type="button"

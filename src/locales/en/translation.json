@@ -44,6 +44,17 @@
   "directions": {
     "go": "Get Directions"
   },
+  "stay": {
+    "title": "Find a cozy stay",
+    "titleShort": "Stay",
+    "hint": "Open B&Bs, guesthouses & converted monastery hotels near this spot.",
+    "query": "chambre d'hôtes hôtel de charme"
+  },
+  "war": {
+    "all": "All Wars",
+    "ww1": "WWI",
+    "ww2": "WWII"
+  },
   "stops": {
     "dunkirk": {
       "name": "Dunkirk (Dunkerque)",
@@ -396,6 +407,127 @@
       "blurb": "The battlefield where the German army was encircled and destroyed in August 1944.",
       "context": "In the pocket between Falaise and Argentan, the German armies were surrounded by the Allies; tens of thousands were killed or captured in the mop-up.",
       "tip": "Drive the country lanes to grasp the scale of the encirclement."
+    },
+
+    "menin-gate": {
+      "name": "Menin Gate Memorial",
+      "date": "1914–1918",
+      "hours": "Always open; the Last Post sounds nightly at 20:00",
+      "blurb": "The great memorial to 54,896 missing soldiers of the Ypres Salient, and home of the nightly Last Post.",
+      "context": "The vast Menin Gate lists the 54,896 Commonwealth soldiers with no known grave who fell in the Ypres Salient. Since 1928, buglers have played the Last Post beneath its arches every single night at 20:00 — the only ceremony of its kind in the world.",
+      "tip": "Arrive well before 20:00 — the nightly Last Post ceremony draws a large crowd."
+    },
+    "in-flanders-fields-museum": {
+      "name": "In Flanders Fields Museum",
+      "date": "1914–1918",
+      "hours": "Daily 10:00–17:00 (Nov–Mar); 09:30–18:00 (Apr–Oct)",
+      "blurb": "Ypres' Cloth Hall is home to an immersive museum of the First World War.",
+      "context": "Housed in the rebuilt Cloth Hall at the heart of Ypres, the museum tells the story of WWI in the Salient through personal stories, including the Canadian poet John McCrae, who wrote 'In Flanders Fields' at nearby Essex Farm.",
+      "tip": "The rooftop walkway gives a superb view over the reconstructed medieval town."
+    },
+    "essex-farm-cemetery": {
+      "name": "Essex Farm Cemetery & Dressing Station",
+      "date": "1915–1917",
+      "hours": "Always open",
+      "blurb": "A battlefield cemetery beside the original aid post where John McCrae wrote his famous poem.",
+      "context": "This cemetery on the Ypres–Brielen road lies next to a preserved underground dressing station. It was here, in May 1915, that Canadian officer John McCrae composed 'In Flanders Fields' after burying a friend.",
+      "tip": "Look for the preserved tunnels and the memorial plaque to McCrae's poem."
+    },
+    "hill-60": {
+      "name": "Hill 60",
+      "date": "1915–1917",
+      "hours": "Always open",
+      "blurb": "A famous artificial hill shaped by craters and tunnels, the scene of fierce mining and trench fighting.",
+      "context": "Hill 60 was a crucial observation point fought over throughout the war. In April 1915 the Germans launched the first major gas attack of WWI here, and the landscape is still pockmarked by the craters of the great mining war.",
+      "tip": "The walk around the craters, trenches and bunkers is short but striking."
+    },
+    "tyne-cot-cemetery": {
+      "name": "Tyne Cot Cemetery",
+      "date": "1917",
+      "hours": "Daily 10:00–18:00 (Apr–Sep); 09:00–17:00 (Oct–Mar)",
+      "blurb": "The largest Commonwealth war cemetery in the world, final resting place of nearly 12,000 soldiers.",
+      "context": "Tyne Cot crowns the ridge and holds nearly 12,000 graves — the greatest number of Commonwealth burials anywhere. It was built on ground taken by Allied troops at Passchendaele in 1917, and the Memorial to the Missing bears over 34,000 names.",
+      "tip": "Climb to the top for a vast panorama over the battlefield where the 'Passchendaele' mud was won."
+    },
+    "passchendaele-museum": {
+      "name": "Memorial Museum Passchendaele 1917",
+      "date": "1917",
+      "hours": "Daily 09:00–18:00 (Apr–Nov); weekends 10:00–17:00 (Nov–Mar)",
+      "blurb": "An atmospheric museum recreating the dugouts and mud of the 1917 Passchendaele offensive.",
+      "context": "In Zonnebeke Château, the museum powerfully re-creates the British and German dugouts of the Third Battle of Ypres (Passchendaele), including reconstructed underground shelters and a re-created flooded battlefield.",
+      "tip": "A reconstructed network of underground dugouts brings trench life vividly to mind."
+    },
+    "langemark-cemetery": {
+      "name": "Langemark German Cemetery",
+      "date": "1914–1917",
+      "hours": "Always open",
+      "blurb": "A sombre German war cemetery — a counterpart to the Commonwealth cemeteries nearby.",
+      "context": "Langemark is one of the few German cemeteries in the Salient, holding around 44,000 dead in dark, flat ranges of graves — a moving contrast to the white stones of the Commonwealth sites. In 1914 the German reserve troops sang here before advancing.",
+      "tip": "Its dark, sunken graves feel very different from the Allied cemeteries — worth seeing both."
+    },
+    "polygon-wood": {
+      "name": "Polygon Wood / Buttes Cemetery",
+      "date": "1915–1917",
+      "hours": "Always open",
+      "blurb": "A long-contested wood with preserved trenches, bunkers and its own hilltop cemetery.",
+      "context": "Polygon Wood was fought over for years; the 'Buttes' on its crest held the British line. Remains of concrete shelters, trenches and shell craters still scar the woods today.",
+      "tip": "Find the butte and its cemetery, then follow the short battlefield trail through the trees."
+    },
+    "vimy-ridge": {
+      "name": "Vimy Ridge Canadian Memorial",
+      "date": "9–12 Apr 1917",
+      "hours": "Daily 09:30–18:00 (Apr–Oct); reduced hours Nov–Mar",
+      "blurb": "The soaring Canadian memorial on the ridge taken in the Battle of Vimy Ridge in April 1917.",
+      "context": "The towering twin-pylon Canadian National Vimy Memorial crowns the ridge with 20,000 names of the missing. In April 1917 all four Canadian divisions fought together for the first time to capture the ridge, a defining moment for Canada.",
+      "tip": "Book ahead to tour the preserved underground tunnels and trenches of the battlefield."
+    },
+    "thiepval-memorial": {
+      "name": "Thiepval Memorial",
+      "date": "1 Jul 1916",
+      "hours": "Always open",
+      "blurb": "The immense memorial to the missing of the Somme, commemorating over 72,000 soldiers.",
+      "context": "The vast red-brick Thiepval is the largest Commonwealth memorial in the world, bearing more than 72,000 names of soldiers with no known grave from the Somme battles of 1916–1918. It rises above the ridge where the first day of the Somme was fought.",
+      "tip": "The visitor centre and the view across the former battlefield are both unmissable."
+    },
+    "beaumont-hamel": {
+      "name": "Beaumont-Hamel Newfoundland Memorial",
+      "date": "1 Jul 1916",
+      "hours": "Daily 10:00–18:00 (Apr–Oct); 09:00–17:00 (Nov–Mar)",
+      "blurb": "A preserved 1 July 1916 battlefield with trenches and the lone caribou statue in memory of the Newfoundland Regiment.",
+      "context": "The Beaumont-Hamel site preserves a section of the Somme battlefield as it was on the first day. The Newfoundland Regiment was decimated here in the morning of 1 July 1916; the bronze caribou, the emblem of the regiment, stands over the ground.",
+      "tip": "The park's preserved trenches and mine craters let you trace the attack lines on foot."
+    },
+    "lochnagar-crater": {
+      "name": "Lochnagar Crater",
+      "date": "1 Jul 1916",
+      "hours": "Always open",
+      "blurb": "The largest crater left by a mine explosion anywhere, on the first day of the Somme.",
+      "context": "At 07:28 on 1 July 1916, a 27-tonne mine detonated here, blasting one of the largest craters ever made by a single explosion and signalling the start of the Battle of the Somme. The crater is now privately preserved as a memorial.",
+      "tip": "Walk right down into the crater to grasp its astonishing scale."
+    },
+    "notre-dame-de-lorette": {
+      "name": "Notre-Dame-de-Lorette",
+      "date": "1914–1915",
+      "hours": "Always open; Lantern Tower: 10:00–18:00",
+      "blurb": "France's largest military cemetery and the memorial to the battles of Artois.",
+      "context": "The hill of Notre-Dame-de-Lorette holds more than 20,000 French graves and the remains of another 20,000 in ossuaries — France's largest military cemetery. It commemorates the bitter 1915 Artois offensives around Arras.",
+      "tip": "Climb the ring of light at the top — a modern memorial on the hill."
+    },
+    "compiegne-armistice": {
+      "name": "Compiègne Armistice Clearing",
+      "date": "11 Nov 1918",
+      "hours": "Daily 10:00–18:00 (Apr–Sep); 10:00–17:30 (Oct–Mar)",
+      "blurb": "The clearing in the forest where the Armistice ending WWI was signed on 11 November 1918.",
+      "context": "In a clearing in the Forest of Compiègne, on 11 November 1918, the Armistice was signed in a railway carriage, ending WWI. The carriage was destroyed in 1940 after the second, harsher armistice was signed in the same place — a replica now stands inside the memorial museum.",
+      "tip": "The evocative memorial museum is built around a faithful reproduction of the 1918 railway carriage."
+    },
+    "douaumont-ossuary": {
+      "name": "Douaumont Ossuary & Verdun",
+      "date": "Feb–Dec 1916",
+      "hours": "Daily 10:00–18:30 (Apr–Sep); 10:00–17:00 (Oct–Mar)",
+      "blurb": "The moving ossuary holding the remains of soldiers from the 1916 Battle of Verdun.",
+      "context": "The Douaumont Ossuary holds the remains of over 130,000 unidentified soldiers from the 300-day Battle of Verdun, the longest battle of WWI. Nearby, Fort Douaumont still bears the scars of the fighting that consumed the village below.",
+      "tip": "Pair the ossuary with Fort Douaumont and walk the preserved battlefield remains nearby."
     }
   }
 }

@@ -6,12 +6,14 @@ import i18n from "i18next";
 import type { Stop } from "./StopList";
 import { StampSvg, COLORS } from "./StampSvg";
 import { DirectionsButton } from "./DirectionsButton";
+import { StayButton } from "./StayButton";
 import { renderToString } from "react-dom/server";
 import { Clock } from "lucide-react";
 
 interface MapProps {
   stops: Stop[];
   activeCategory: string;
+  activeWar: string;
   selectedStop: Stop | null;
   onClearSelectedStop: () => void;
 }
@@ -19,6 +21,7 @@ interface MapProps {
 export const RouteMap: React.FC<MapProps> = ({
   stops,
   activeCategory,
+  activeWar,
   selectedStop,
   onClearSelectedStop,
 }) => {
@@ -35,7 +38,7 @@ export const RouteMap: React.FC<MapProps> = ({
 
     const mapInstance = L.map(mapContainerRef.current, {
       scrollWheelZoom: true,
-    }).setView([49.6, 0.6], 8);
+    }).setView([50.0, 1.3], 8);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
@@ -62,7 +65,9 @@ export const RouteMap: React.FC<MapProps> = ({
     markersRef.current.clear();
 
     stops.forEach((stop, index) => {
-      const show = activeCategory === "all" || stop.cat === activeCategory;
+      const show =
+        (activeCategory === "all" || stop.cat === activeCategory) &&
+        (activeWar === "all" || (stop.war ?? "ww2") === activeWar);
       if (!show) return;
 
       const rotIcon = ((index * 37) % 13) - 6;
@@ -136,6 +141,7 @@ export const RouteMap: React.FC<MapProps> = ({
               {i18n.t(`stops.${stop.id}.tip`)}
             </div>
             <DirectionsButton lat={stop.lat} lng={stop.lng} />
+            <StayButton lat={stop.lat} lng={stop.lng} area={stop.area} />
           </div>
         </div>,
       );
@@ -148,7 +154,7 @@ export const RouteMap: React.FC<MapProps> = ({
       markersRef.current.set(stop.id, marker);
     });
     // re-run when language changes so popups (rendered as static HTML) update too
-  }, [stops, activeCategory, t, i18n.resolvedLanguage]);
+  }, [stops, activeCategory, activeWar, t, i18n.resolvedLanguage]);
 
   // Handle flying to selected stop
   useEffect(() => {

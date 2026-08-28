@@ -44,6 +44,17 @@
   "directions": {
     "go": "Routebeschrijving"
   },
+  "stay": {
+    "title": "Vind een knusse overnachting",
+    "titleShort": "Overnachten",
+    "hint": "Open B&B's, logies & omgebouwde kloosterhotels in de buurt van deze plek.",
+    "query": "chambre d'hôtes hôtel de charme"
+  },
+  "war": {
+    "all": "Beide oorlogen",
+    "ww1": "WO I",
+    "ww2": "WO II"
+  },
   "stops": {
     "dunkirk": {
       "name": "Duinkerke (Dunkerque)",
@@ -396,6 +407,127 @@
       "blurb": "Het slagveld waar het Duitse leger in augustus 1944 werd omsingeld en vernietigd.",
       "context": "Tussen Falaise en Argentan werd het Duitse leger door de geallieerden omsingeld; tienduizenden werden gedood of gevangengenomen bij de opruiming.",
       "tip": "Rijd door de landweggetjes om de omvang van de omsingeling te besefen."
+    },
+
+    "menin-gate": {
+      "name": "Menin Gate Memorial",
+      "date": "1914–1918",
+      "hours": "Altijd open; de Last Post klinkt elke avond om 20:00",
+      "blurb": "Het grote monument voor 54.896 vermiste soldaten van de Ieperboog, en thuisbasis van de dagelijkse Last Post.",
+      "context": "De enorme Menenpoort vermeldt de 54.896 soldaten van de Commonwealth zonder bekend graf die in de Ieperboog sneuvelden. Sinds 1928 spelen trompetters elke avond om 20:00 uur de Last Post onder de bogen — een ceremonie die nergens ter wereld nog bestaat.",
+      "tip": "Kom ruim voor 20:00 — bij de dagelijkse Last Post-ceremonie is het altijd druk."
+    },
+    "in-flanders-fields-museum": {
+      "name": "In Flanders Fields Museum",
+      "date": "1914–1918",
+      "hours": "Dagelijks 10:00–17:00 (nov–mrt); 09:30–18:00 (apr–okt)",
+      "blurb": "De Lakenhalle van Ieper huisvest een indrukwekkend museum over de Eerste Wereldoorlog.",
+      "context": "Het museum in de heropgebouwde Lakenhalle vertelt het verhaal van WO I in de Ieperboeg via persoonlijke verhalen, waaronder dat van de Canadese dichter John McCrae, die 'In Flanders Fields' schreef bij nabijgelegen Essex Farm.",
+      "tip": "Vanaf het dakterras heb je een prachtig uitzicht over het heropgebouwde middeleeuwse centrum."
+    },
+    "essex-farm-cemetery": {
+      "name": "Essex Farm Cemetery & verbandpost",
+      "date": "1915–1917",
+      "hours": "Altijd open",
+      "blurb": "Een veldbegraafplaats naast de oorspronkelijke verbandpost waar John McCrae zijn beroemde gedicht schreef.",
+      "context": "Deze begraafplaats aan de weg Ieper–Brielen ligt naast een bewaarde ondergrondse verbandpost. Hier componerde de Canadese officier John McCrae in mei 1915 'In Flanders Fields' na het begraven van een vriend.",
+      "tip": "Let op de bewaarde tunnels en de plaquette met McCrae's gedicht."
+    },
+    "hill-60": {
+      "name": "Hill 60",
+      "date": "1915–1917",
+      "hours": "Altijd open",
+      "blurb": "Een beroemde heuvel gevormd door kraters en tunnels, toneel van hevige mijn- en loopgravenoorlog.",
+      "context": "Hill 60 was een cruciaal observatiepunt dat de hele oorlog omstreden bleef. In april 1915 lanceerden de Duitsers hier de eerste grote gasaanval van WO I, en het landschap is nog steeds bezaaid met kraters van de mijnenoorlog.",
+      "tip": "De wandeling langs de kraters, loopgraven en bunkers is kort maar indrukwekkend."
+    },
+    "tyne-cot-cemetery": {
+      "name": "Tyne Cot Cemetery",
+      "date": "1917",
+      "hours": "Dagelijks 10:00–18:00 (apr–sep); 09:00–17:00 (okt–mrt)",
+      "blurb": "De grootste Commonwealth-oorlogsbegraafplaats ter wereld, rustplaats van bijna 12.000 soldaten.",
+      "context": "Tyne Cot bekroont de kam en herbergt bijna 12.000 graven — het grootste aantal Commonwealth-begrafenissen waar ook ter wereld. Het werd gebouwd op grond die in 1917 bij Passendale werd veroverd, en het Missing Memorial vermeldt meer dan 34.000 namen.",
+      "tip": "Klim naar de top voor een weids panorama over het slagveld waar de modder van Passendale werd gewonnen."
+    },
+    "passchendaele-museum": {
+      "name": "Memorial Museum Passchendaele 1917",
+      "date": "1917",
+      "hours": "Dagelijks 09:00–18:00 (apr–nov); weekenden 10:00–17:00 (nov–mrt)",
+      "blurb": "Een sfeervol museum dat de dug-outs en de modder van het offensief van Passendale in 1917 naspeelt.",
+      "context": "In het Kasteel van Zonnebeke beeldt het museum de Britse en Duitse dug-outs van de Derde Slag om Ieper (Passendale) af, waaronder gereconstrueerde ondergrondse schuilkelders en een nagebootste ondergelopen slagveld.",
+      "tip": "Een gereconstrueerd netwerk van ondergrondse dug-outs brengt het loopgravenleven treffend tot leven."
+    },
+    "langemark-cemetery": {
+      "name": "Duitse militaire begraafplaats Langemark",
+      "date": "1914–1917",
+      "hours": "Altijd open",
+      "blurb": "Een stemmige Duitse oorlogsbegraafplaats — een tegenhanger van de Commonwealth-begraafplaatsen in de buurt.",
+      "context": "Langemark is een van de weinige Duitse begraafplaatsen in de Ieperboog en herbergt zo'n 44.000 doden in donkere, vlakke rijen graven — een aangrijpend contrast met de witte stenen van de geallieerde sites. In 1914 zongen de Duitse reservetroepen hier alvorens op te rukken.",
+      "tip": "De donkere, verzonken graven voelen heel anders dan de geallieerde sites — bekijk zeker beide."
+    },
+    "polygon-wood": {
+      "name": "Polygon Wood / Buttes Cemetery",
+      "date": "1915–1917",
+      "hours": "Altijd open",
+      "blurb": "Een lang omstreden bos met bewaarde loopgraven, bunkers en een eigen begraafplaats op de heuveltop.",
+      "context": "Polygon Wood werd jarenlang bevochten; de 'Buttes' op de kam vormden de Britse linie. Resten van betonnen schuilkelders, loopgraven en granaattrechters tekenen het bos tot op vandaag.",
+      "tip": "Zoek de butte met zijn begraafplaats en volg daarna het korte slagveldpad door de bomen."
+    },
+    "vimy-ridge": {
+      "name": "Canadees monument Vimy Ridge",
+      "date": "9–12 april 1917",
+      "hours": "Dagelijks 09:30–18:00 (apr–okt); beperkte uren nov–mrt",
+      "blurb": "Het hoog oprijzende Canadese monument op de kam die in april 1917 werd veroverd in de Slag om Vimy.",
+      "context": "Het torenhoge Canadese Nationale Vimy Memorial bekroont de kam en draagt 20.000 namen van vermisten. In april 1917 vochten alle vier Canadese divisies voor het eerst samen om de kam te veroveren — een bepalend moment voor Canada.",
+      "tip": "Boek vooraf een rondleiding door de bewaarde ondergrondse tunnels en loopgraven van het slagveld."
+    },
+    "thiepval-memorial": {
+      "name": "Thiepval Memorial",
+      "date": "1 juli 1916",
+      "hours": "Altijd open",
+      "blurb": "Het immense monument voor de vermisten van de Somme, ter nagedachtenis van meer dan 72.000 soldaten.",
+      "context": "Het enorme rode-bakstenen Thiepval is het grootste Commonwealth-monument ter wereld en draagt meer dan 72.000 namen van soldaten zonder bekend graf uit de Somme-slagen van 1916–1918. Het verheft zich boven de kam waar de eerste dag van de Somme werd uitgevochten.",
+      "tip": "Het bezoekerscentrum en het uitzicht over het voormalige slagveld zijn beide niet te missen."
+    },
+    "beaumont-hamel": {
+      "name": "Newfoundland Memorial Beaumont-Hamel",
+      "date": "1 juli 1916",
+      "hours": "Dagelijks 10:00–18:00 (apr–okt); 09:00–17:00 (nov–mrt)",
+      "blurb": "Een bewaard gebleven slagveld van 1 juli 1916 met loopgraven en het eenzame kariboe-beeld ter nagedachtenis van het Newfoundlandregiment.",
+      "context": "De site van Beaumont-Hamel bewaart een deel van het Somme-slagveld zoals het was op de eerste dag. Het Newfoundlandregiment werd hier op de ochtend van 1 juli 1916 gedecimeerd; de bronzen kariboe, het embleem van het regiment, staat boven de grond.",
+      "tip": "De bewaarde loopgraven en mijnkraters van het park laten je de aanvalslinies te voet volgen."
+    },
+    "lochnagar-crater": {
+      "name": "Lochnagar-krater",
+      "date": "1 juli 1916",
+      "hours": "Altijd open",
+      "blurb": "De grootste krater die ooit door een mijn werd geslagen, op de eerste dag van de Somme.",
+      "context": "Om 07:28 op 1 juli 1916 ontplofte hier een mijn van 27 ton, waardoor een van de grootste kraters ter wereld ontstond en de Slag aan de Somme begon. De krater is nu privé bewaard als monument.",
+      "tip": "Loop helemaal de krater in om de verbijsterende omvang te kunnen bevatten."
+    },
+    "notre-dame-de-lorette": {
+      "name": "Notre-Dame-de-Lorette",
+      "date": "1914–1915",
+      "hours": "Altijd open; Lanterntoren: 10:00–18:00",
+      "blurb": "De grootste militaire begraafplaats van Frankrijk en het monument voor de slagen van Artois.",
+      "context": "Op de heuvel van Notre-Dame-de-Lorette liggen meer dan 20.000 Franse graven en de resten van nog eens 20.000 in ossuaria — de grootste militaire begraafplaats van Frankrijk. Ze herdenkt de bittere offensieven van Artois rond Arras in 1915.",
+      "tip": "Klim naar de lichtring bovenaan — een modern monument op de heuvel."
+    },
+    "compiegne-armistice": {
+      "name": "Open plek van de Wapenstilstand van Compiègne",
+      "date": "11 november 1918",
+      "hours": "Dagelijks 10:00–18:00 (apr–sep); 10:00–17:30 (okt–mrt)",
+      "blurb": "De bosopen plek waar op 11 november 1918 de wapenstilstand die WO I beëindigde werd ondertekend.",
+      "context": "Op een open plek in het bos van Compiègne werd op 11 november 1918 in een treinwagon de wapenstilstand ondertekend die WO I beëindigde. De wagon werd in 1940 verwoest na de tweede, hardere wapenstilstand op dezelfde plek — een replica staat nu in het herdenkingsmuseum.",
+      "tip": "Het sfeervolle museum is gebouwd rond een getrouw exemplaar van de treinwagon van 1918."
+    },
+    "douaumont-ossuary": {
+      "name": "Ossuarium Douaumont & Verdun",
+      "date": "feb–dec 1916",
+      "hours": "Dagelijks 10:00–18:30 (apr–sep); 10:00–17:00 (okt–mrt)",
+      "blurb": "Het ontroerende ossuarium met de resten van gevallen soldaten uit de Slag om Verdun in 1916.",
+      "context": "Het ossuarium van Douaumont herbergt de resten van meer dan 130.000 niet-geïdentificeerde soldaten uit de driehonderd dagen van de Slag om Verdun, de langste veldslag van WO I. In de buurt draagt Fort Douaumont nog steeds de sporen van de gevechten rond het dorp eronder.",
+      "tip": "Combineer het ossuarium met Fort Douaumont en wandel over de bewaard gebleven slagveldresten vlakbij."
     }
   }
 }

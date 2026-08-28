@@ -50,6 +50,7 @@ function App() {
   const { t } = useTranslation();
   const [visited, setVisited] = useState<Set<string>>(new Set());
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [activeWar, setActiveWar] = useState<string>("all");
   const [search, setSearch] = useState<string>("");
   const [selectedStop, setSelectedStop] = useState<Stop | null>(null);
   const [mobileView, setMobileView] = useState<"map" | "list">("map");
@@ -197,6 +198,26 @@ function App() {
           }`}
         >
           <div className="overflow-y-auto flex-1 min-h-0 px-4 py-4 md:px-6 space-y-4">
+            {/* War era toggle */}
+            <div className="flex items-center gap-1 border-[3px] border-[#161616] bg-[#FFFFFF] p-1 shadow-[3px_3px_0_#161616]">
+              {(["all", "ww1", "ww2"] as const).map((war) => {
+                const active = activeWar === war;
+                return (
+                  <button
+                    key={war}
+                    onClick={() => setActiveWar(war)}
+                    className={`flex-1 py-1.5 font-mono text-[11px] md:text-[12px] font-bold tracking-wider uppercase cursor-pointer border-2 transition-colors ${
+                      active
+                        ? "bg-[#161616] text-[#F5C400] border-[#161616]"
+                        : "bg-transparent text-[#161616] border-transparent hover:bg-[#F4EFE2]"
+                    }`}
+                  >
+                    {t(`war.${war}`)}
+                  </button>
+                );
+              })}
+            </div>
+
             <p className="font-sans text-[12.5px] font-medium leading-relaxed text-[#161616] bg-[#FFFFFF] border-[2px] border-[#161616] p-2.5 shadow-[2px_2px_0_#161616]">
               {t("description")}
             </p>
@@ -226,6 +247,7 @@ function App() {
               onToggleVisited={handleToggleVisited}
               onStopClick={handleStopClick}
               activeCategory={activeCategory}
+              activeWar={activeWar}
               search={search}
             />
           </div>
@@ -241,6 +263,7 @@ function App() {
             <RouteMap
               stops={STOPS}
               activeCategory={activeCategory}
+              activeWar={activeWar}
               selectedStop={selectedStop}
               onClearSelectedStop={() => setSelectedStop(null)}
             />
