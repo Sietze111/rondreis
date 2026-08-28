@@ -1,21 +1,25 @@
 {
-  "title": "Yevheniia & Olena's Bern Passport",
-  "subtitle": "A Self-Guided Walking & Wonder Map · Hidden gems of Bern",
-  "description": "Explore Bern and all its hidden gems with this self-guided walking map. Tap a stamp on the map, or pick a stop from the list below to fly straight to it. Tap the circle next to a name to mark it visited as you go.",
+  "title": "France War Trails — Iepe & Sietze",
+  "subtitle": "A Father & Son Road Trip · Memorials, Museums & Battlefields",
+  "description": "Follow the D-Day and Battle of Normandy story across France with this self-guided field map. Tap a marker on the map, or pick a stop from the list to fly straight to it. Tap the circle next to a name to mark it visited as you go.",
 
-  "install": "Install Passport App",
+  "install": "Install Field Guide",
 
   "categories": {
     "all": "All Stops",
-    "history": "Historic",
-    "nature": "Nature",
-    "culture": "Culture",
-    "water": "Water",
-    "viewpoint": "Viewpoints"
+    "battlefield": "Battlefields",
+    "bunker": "Bunkers",
+    "battery": "Gun Batteries",
+    "fort": "Forts",
+    "museum": "Museums",
+    "memorial": "Memorials",
+    "cemetery": "Cemeteries",
+    "bridge": "Bridges",
+    "beach": "Beaches"
   },
 
   "howToTitle": "How to use:",
-  "howTo": "Tap a stamp on the map, or pick a stop from the list below to fly straight to it. Tap the circle next to a name to mark it visited as you go.",
+  "howTo": "Tap a marker on the map, or pick a stop from the list to fly straight to it. Tap the circle next to a name to mark it visited as you go.",
 
   "mobile": {
     "map": "Map View",
@@ -24,105 +28,235 @@
 
   "footer": {
     "tiles": "Map data & tiles © OpenStreetMap contributors",
-    "built": "Stamps are hand-drawn vector illustrations · Built with React & Tailwind"
+    "built": "Field guide to the Western Front · Built with React & Tailwind"
   },
   "progress": {
-    "title": "Passport Progress",
+    "title": "Expedition Progress",
     "count": "{{visited}} / {{total}} locations visited"
   },
   "popup": {
     "goodToKnow": "Good to know"
   },
   "stops": {
-    "rosengarten": {
-      "name": "Rosengarten",
-      "blurb": "Bern's iconic rose garden with panoramic Old Town views.",
-      "tip": "Best at sunset."
+    "dunkirk": {
+      "name": "Dunkirk (Dunkerque)",
+      "blurb": "The beach and harbour from which the British Expeditionary Force was evacuated in May 1940.",
+      "tip": "Visit the Dunkirk Memorial and the wartime museum on Route des Bains."
     },
-    "baerenpark": {
-      "name": "BärenPark",
-      "blurb": "Home of Bern's symbolic bears.",
-      "tip": "Cross Nydeggbrücke afterwards."
+    "blockhaus-eperlecques": {
+      "name": "Blockhaus d'Éperlecques",
+      "blurb": "A giant unfinished Nazi bunker built to launch V-2 rockets at London.",
+      "tip": "Giant concrete slab nicknamed 'the Blockhouse' — allow an hour for the bunker trail."
     },
-    "kaefigturm": {
-      "name": "Käfigturm",
-      "blurb": "Former prison tower.",
-      "tip": "Free exhibitions."
+    "la-coupole": {
+      "name": "La Coupole",
+      "blurb": "A huge concrete dome originally meant to store V-2 rockets, now a museum.",
+      "tip": "The planetarium and history centre are worth the visit on a rainy day."
     },
-    "kindlifresser": {
-      "name": "Kindlifresserbrunnen",
-      "blurb": "Bern's famous Child Eater Fountain.",
-      "tip": "Visit early morning."
+    "batterie-todt": {
+      "name": "Batterie Todt",
+      "blurb": "A German coastal battery near Cap Gris-Nez with a massive armoured turret.",
+      "tip": "Visit the adjacent 1944 museum and climb the dunes for sea views."
     },
-    "botanical": {
-      "name": "Botanical Garden",
-      "blurb": "Free botanical gardens.",
-      "tip": "Great in spring."
+    "fortress-mimoyecques": {
+      "name": "Fortress of Mimoyecques",
+      "blurb": "A secret underground V-3 cannon complex built into the chalk hills.",
+      "tip": "The shaft network is reached by lift — very atmospheric underground."
     },
-    "gurten": {
-      "name": "Gurten",
-      "blurb": "Bern's local mountain.",
-      "tip": "Ride the funicular."
+    "fort-de-la-creche": {
+      "name": "Fort de la Crèche",
+      "blurb": "A restored 19th-century fort at Cap de la Crèche re-used by the Germans in WWII.",
+      "tip": "Combine with a walk along the clifftop coastal path."
     },
-    "egelsee": {
-      "name": "Egelsee",
-      "blurb": "Quiet hidden pond.",
-      "tip": "Peaceful evenings."
+    "musee-39-45-ambleteuse": {
+      "name": "Musée 39-45 Ambleteuse",
+      "blurb": "A private collection of WWII military objects and memorials at Ambleteuse.",
+      "tip": "Compact collection, great for a quick stop between sites."
     },
-    "elfenau": {
-      "name": "Elfenau",
-      "blurb": "Historic riverside park.",
-      "tip": "Walk along the Aare."
+    "memorial-caen": {
+      "name": "Mémorial de Caen",
+      "blurb": "Caen's vast museum of WWII and the Battle for Normandy.",
+      "tip": "Set aside half a day — the Peace Memorial is one of Europe's finest."
     },
-    "museumkom": {
-      "name": "Museum für Kommunikation",
-      "blurb": "Interactive communication museum.",
-      "tip": "Ideal on rainy days."
+    "merville-battery": {
+      "name": "Merville Battery",
+      "blurb": "The fortified German gun battery stormed by British paratroopers before dawn on D-Day.",
+      "tip": "Live history tours and re-enactments run in summer."
     },
-    "hausreligionen": {
-      "name": "Haus der Religionen",
-      "blurb": "Interfaith cultural center.",
-      "tip": "Visit Restaurant Vanakam."
+    "pegasus-bridge": {
+      "name": "Pegasus Bridge",
+      "blurb": "The famous bridge over the Caen canal captured by British glider troops in the first minutes of D-Day.",
+      "tip": "The old bridge has been moved next to the new memorial museum."
     },
-    "marzili": {
-      "name": "Marzili Freibad",
-      "blurb": "Popular riverside swimming area.",
-      "tip": "Float the Aare."
+    "memorial-pegasus": {
+      "name": "Pegasus Memorial",
+      "blurb": "Museum next to Pegasus Bridge telling the story of the glider assault.",
+      "tip": "See the preserved Horsa glider and the original Pegasus Bridge."
     },
-    "lorrainebad": {
-      "name": "Lorrainebad",
-      "blurb": "Local riverside bathing spot.",
-      "tip": "Less crowded."
+    "ouistreham-atlantic-wall": {
+      "name": "Atlantic Wall Museum — Ouistreham",
+      "blurb": "A restored German bunker complex at Sword Beach.",
+      "tip": "Climb to the top of the 'Riva-Bella' battery for a wide view of the beach."
     },
-    "wohlensee": {
-      "name": "Wohlensee Dam",
-      "blurb": "Reservoir west of Bern.",
-      "tip": "Perfect by bike."
+    "sword-beach": {
+      "name": "Sword Beach",
+      "blurb": "The easternmost D-Day landing beach, stormed by the British 3rd Division.",
+      "tip": "Walk the promenade at Ouistreham and visit the D-Day sculpture."
     },
-    "bantigerturm": {
-      "name": "Bantiger Turm",
-      "blurb": "Excellent panoramic hill.",
-      "tip": "Climb the tower."
+    "juno-beach": {
+      "name": "Juno Beach",
+      "blurb": "The Canadian landing beach, later linked up with Commonwealth forces.",
+      "tip": "Lovely wide strand; the centre is busy in high summer."
     },
-    "chutzenturm": {
-      "name": "Chutzenturm",
-      "blurb": "Wooden lookout tower.",
-      "tip": "Clear days only."
+    "juno-beach-centre": {
+      "name": "Juno Beach Centre",
+      "blurb": "Canada's memorial to its role in the Normandy landings.",
+      "tip": "Check the guided bunker tour times on arrival."
     },
-    "schlossjegenstorf": {
-      "name": "Schloss Jegenstorf",
-      "blurb": "Moated baroque castle.",
-      "tip": "Museum inside."
+    "beny-sur-mer-cemetery": {
+      "name": "Bény-sur-Mer Canadian War Cemetery",
+      "blurb": "Resting place for nearly 2,000 Commonwealth soldiers, many from Juno Beach.",
+      "tip": "A quiet, moving stop — white crosses in regular rows."
     },
-    "schlosslaupen": {
-      "name": "Schloss Laupen",
-      "blurb": "Historic hilltop castle.",
-      "tip": "Explore old town."
+    "hillman-strongpoint": {
+      "name": "Hillman Strongpoint",
+      "blurb": "A large German strongpoint near Colleville-Montgomery captured on D-Day.",
+      "tip": "Free to walk the trenches and bunkers across the fields."
     },
-    "belpairport": {
-      "name": "Bern Airport Viewing Area",
-      "blurb": "Watch aircraft movements.",
-      "tip": "Weekend activity."
+    "gold-beach": {
+      "name": "Gold Beach",
+      "blurb": "The central British landing beach, where the Mulberry harbour was built.",
+      "tip": "Best combined with Arromanches and the Port Winston remains."
+    },
+    "arromanches": {
+      "name": "Arromanches-les-Bains",
+      "blurb": "Site of the Mulberry 'Port Winston' artificial harbour.",
+      "tip": "View the concrete caissons from the beach or the clifftop viewpoint."
+    },
+    "arromanches-360": {
+      "name": "Arromanches 360°",
+      "blurb": "Circular cinema showing archival film of the D-Day landings.",
+      "tip": "The wide-screen film runs continuously — check show times."
+    },
+    "longues-sur-mer-battery": {
+      "name": "Longues-sur-Mer Battery",
+      "blurb": "A German gun battery on a clifftop, its casemates still intact.",
+      "tip": "Walk from the car park down to the cliff for the best view."
+    },
+    "british-normandy-memorial": {
+      "name": "British Normandy Memorial",
+      "blurb": "Memorial to the British soldiers who died in Normandy in summer 1944.",
+      "tip": "The columns list over 20,000 names; very moving at sunset."
+    },
+    "normandy-american-cemetery": {
+      "name": "Normandy American Cemetery",
+      "blurb": "The vast American cemetery above Omaha Beach, overlooking the English Channel.",
+      "tip": "Arrive before the guided tours; soften your voice — it is a place of remembrance."
+    },
+    "overlord-museum": {
+      "name": "Overlord Museum",
+      "blurb": "Museum by Omaha Beach displaying vehicles, uniforms and D-Day objects.",
+      "tip": "Near the American cemetery, easy to combine with it."
+    },
+    "omaha-beach": {
+      "name": "Omaha Beach",
+      "blurb": "The 'Bloody Omaha' American landing beach, the hardest-fought on D-Day.",
+      "tip": "Walk from the memorial down onto the sand for quiet reflection."
+    },
+    "wn60": {
+      "name": "WN60 Strongpoint",
+      "blurb": "One of Omaha Beach's German defensive positions, opposite the American cemetery.",
+      "tip": "Look for the remains in the dunes near the beach."
+    },
+    "wn62": {
+      "name": "WN62 Strongpoint",
+      "blurb": "Famous German emplacement at Omaha that fired on the first landing waves.",
+      "tip": "Interpretation boards explain the D-Day morning hour by hour."
+    },
+    "d-day-omaha-museum": {
+      "name": "D-Day Omaha Museum",
+      "blurb": "A collection of Omaha Beach war relics in Vierville-sur-Mer.",
+      "tip": "Small private museum with wreckage and personal items."
+    },
+    "pointe-du-hoc": {
+      "name": "Pointe du Hoc",
+      "blurb": "The dramatic clifftop stormed by US Rangers, still pockmarked with craters.",
+      "tip": "Walk the battle-scarred headland and see the surviving gun casemates."
+    },
+    "la-cambe-german-cemetery": {
+      "name": "La Cambe German War Cemetery",
+      "blurb": "Germany's largest military cemetery in Normandy, with over 21,000 graves.",
+      "tip": "The contrast with the American cemetery is quietly thought-provoking."
+    },
+    "airborne-museum": {
+      "name": "Airborne Museum — Sainte-Mère-Église",
+      "blurb": "Museum in Sainte-Mère-Église dedicated to the US airborne landings.",
+      "tip": "See the C-47 'Douglas' and the story of the famous parachute on the church tower."
+    },
+    "sainte-mere-eglise": {
+      "name": "Sainte-Mère-Église",
+      "blurb": "One of the first towns liberated, parachuted into by US airborne troops.",
+      "tip": "Spot the parachute hanging from the church steeple."
+    },
+    "utah-beach": {
+      "name": "Utah Beach",
+      "blurb": "The westernmost landing beach — the 4th US Division landed here at H-Hour.",
+      "tip": "Long open beach; the monument and dunes are worth the walk."
+    },
+    "utah-beach-museum": {
+      "name": "Utah Beach Museum",
+      "blurb": "Museum at the actual landing site by the water's edge.",
+      "tip": "Views across the beach from the landing-craft setting are powerful."
+    },
+    "azeville-battery": {
+      "name": "Azeville Battery",
+      "blurb": "A well-preserved German coastal battery inland from Utah Beach.",
+      "tip": "Guided tours explore the dark underground passages."
+    },
+    "la-fiere": {
+      "name": "La Fière",
+      "blurb": "Site of intense fighting over the causeway bridge held by American paratroopers.",
+      "tip": "The bridge and the Iron Mike monument mark a key D-Day crossroads."
+    },
+    "dead-mans-corner": {
+      "name": "Dead Man's Corner Museum",
+      "blurb": "Museum at a famous crossroads tenement fought over by airborne troops.",
+      "tip": "Interesting private collection in the original building."
+    },
+    "carentan": {
+      "name": "Carentan",
+      "blurb": "Strategic town captured by the 101st Airborne, key to joining the beachheads.",
+      "tip": "Walk the town centre and see the church of Notre-Dame."
+    },
+    "normandy-victory-museum": {
+      "name": "Normandy Victory Museum",
+      "blurb": "Museum at Carentan covering the full Battle of Normandy.",
+      "tip": "Large set-piece dioramas with life-size soldiers and vehicles."
+    },
+    "bayeux-battle-of-normandy-museum": {
+      "name": "Bayeux Battle of Normandy Museum",
+      "blurb": "Museum of the British side of the Battle of Normandy.",
+      "tip": "Combine with the nearby Bayeux Tapestry if you have time."
+    },
+    "bayeux-war-cemetery": {
+      "name": "Bayeux War Cemetery",
+      "blurb": "The largest Commonwealth cemetery in France, with over 4,000 graves.",
+      "tip": "Peaceful and impeccably tended; a short walk from the town centre."
+    },
+    "saint-lo": {
+      "name": "Saint-Lô",
+      "blurb": "A key crossroads town, heavily destroyed and fought over in July 1944.",
+      "tip": "See the 'Moon Over Normandy' sculpture in the town centre."
+    },
+    "montormel-memorial": {
+      "name": "Montormel Memorial",
+      "blurb": "A memorial at the site of the closing of the Falaise pocket.",
+      "tip": "The diorama explains the encirclement of the German army."
+    },
+    "falaise-pocket": {
+      "name": "Falaise Pocket",
+      "blurb": "The battlefield where the German army was encircled and destroyed in August 1944.",
+      "tip": "Drive the country lanes to grasp the scale of the encirclement."
     }
   }
 }

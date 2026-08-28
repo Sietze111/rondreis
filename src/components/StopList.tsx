@@ -5,7 +5,16 @@ import { StampSvg, COLORS } from "./StampSvg";
 export interface Stop {
   id: string;
   area: string;
-  cat: "history" | "nature" | "region" | "water" | "culture" | "viewpoint";
+  cat:
+    | "battlefield"
+    | "bunker"
+    | "museum"
+    | "battery"
+    | "fort"
+    | "bridge"
+    | "beach"
+    | "cemetery"
+    | "memorial";
   lat: number;
   lng: number;
   glyph: string;
@@ -20,12 +29,15 @@ interface StopListProps {
 }
 
 const CAT_ORDER: Array<Stop["cat"]> = [
-  "history",
-  "nature",
-  "region",
-  "water",
-  "culture",
-  "viewpoint",
+  "battlefield",
+  "bunker",
+  "battery",
+  "fort",
+  "museum",
+  "memorial",
+  "cemetery",
+  "bridge",
+  "beach",
 ];
 
 export const StopList: React.FC<StopListProps> = ({
@@ -47,7 +59,7 @@ export const StopList: React.FC<StopListProps> = ({
 
         return (
           <div key={cat} className="mt-1">
-            <div className="font-mono text-[11px] uppercase tracking-wider pb-1.5 mb-2 border-b border-[#D8C9A0] flex items-center gap-2 text-[#1B2A4A] font-semibold">
+            <div className="font-mono text-[11px] uppercase tracking-wider pb-1.5 mb-2 border-b border-[#B8AD8E] flex items-center gap-2 text-[#2B2B23] font-semibold">
               <span
                 className="w-2.5 h-2.5 rounded-full"
                 style={{ backgroundColor: COLORS[cat] }}
@@ -63,7 +75,7 @@ export const StopList: React.FC<StopListProps> = ({
                   <div
                     key={stop.id}
                     onClick={() => onStopClick(stop)}
-                    className="flex gap-3.5 items-start p-2 rounded-lg cursor-pointer hover:bg-[#FBF6E9] transition-colors"
+                    className="flex gap-3.5 items-start p-2 rounded-lg cursor-pointer hover:bg-[#E8E2D3] transition-colors"
                   >
                     <div className="w-8 h-8 flex-shrink-0">
                       <StampSvg cat={stop.cat} glyph={stop.glyph} size={32} />
@@ -71,14 +83,14 @@ export const StopList: React.FC<StopListProps> = ({
 
                     <div className="flex-1 min-w-0">
                       <p
-                        className={`font-serif font-bold text-[15px] leading-tight text-[#1B2A4A] ${
+                        className={`font-serif font-bold text-[15px] leading-tight text-[#2B2B23] ${
                           isVisited ? "opacity-40 line-through" : ""
                         }`}
                       >
                         {t(`stops.${stop.id}.name`)}
                       </p>
                       <p
-                        className={`text-[12px] text-[#46506b] ${
+                        className={`text-[12px] text-[#5A5A4E] ${
                           isVisited ? "opacity-40" : ""
                         }`}
                       >
@@ -90,12 +102,12 @@ export const StopList: React.FC<StopListProps> = ({
                       type="button"
                       title={t("stopList.markVisited")}
                       onClick={(e) => onToggleVisited(stop.id, e)}
-                      className={`w-[19px] h-[19px] rounded-full border border-[#1B2A4A] flex-shrink-0 mt-0.5 flex items-center justify-center transition-all ${
-                        isVisited ? "bg-[#1B2A4A]" : "hover:bg-[#1B2A4A]/5"
+                      className={`w-[19px] h-[19px] rounded-full border border-[#2B2B23] flex-shrink-0 mt-0.5 flex items-center justify-center transition-all ${
+                        isVisited ? "bg-[#2B2B23]" : "hover:bg-[#2B2B23]/5"
                       }`}
                     >
                       {isVisited && (
-                        <span className="text-[#F3ECD9] text-[10px] leading-none font-bold">
+                        <span className="text-[#E8E2D3] text-[10px] leading-none font-bold">
                           ✓
                         </span>
                       )}

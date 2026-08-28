@@ -14,7 +14,7 @@ interface MapProps {
   onClearSelectedStop: () => void;
 }
 
-export const BernMap: React.FC<MapProps> = ({
+export const RouteMap: React.FC<MapProps> = ({
   stops,
   activeCategory,
   selectedStop,
@@ -33,7 +33,7 @@ export const BernMap: React.FC<MapProps> = ({
 
     const mapInstance = L.map(mapContainerRef.current, {
       scrollWheelZoom: true,
-    }).setView([46.95421326794626, 7.4741547239042605], 13);
+    }).setView([49.6, 0.6], 8);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
@@ -87,7 +87,7 @@ export const BernMap: React.FC<MapProps> = ({
               <StampSvg cat={stop.cat} glyph={stop.glyph} size={58} />
             </div>
             <div>
-              <p className="popup-title font-serif font-extrabold text-[16px] leading-tight text-[#1B2A4A]">
+              <p className="popup-title font-serif font-extrabold text-[16px] leading-tight text-[#2B2B23]">
                 {i18n.t(`stops.${stop.id}.name`)}
               </p>
               <span
@@ -102,11 +102,11 @@ export const BernMap: React.FC<MapProps> = ({
               </span>
             </div>
           </div>
-          <p className="popup-blurb text-[13.5px] leading-relaxed text-[#1B2A4A] mb-1">
+          <p className="popup-blurb text-[13.5px] leading-relaxed text-[#2B2B23] mb-1">
             {i18n.t(`stops.${stop.id}.blurb`)}
           </p>
-          <div className="popup-tip text-[12.5px] leading-relaxed bg-[#1B2A4A]/5 border-l-4 border-[#1B2A4A] p-2.5 rounded mt-2 text-[#46506b]">
-            <b className="font-mono text-[10px] uppercase tracking-wider text-[#1B2A4A] block mb-0.5">
+          <div className="popup-tip text-[12.5px] leading-relaxed bg-[#2B2B23]/5 border-l-4 border-[#2B2B23] p-2.5 rounded mt-2 text-[#5A5A4E]">
+            <b className="font-mono text-[10px] uppercase tracking-wider text-[#2B2B23] block mb-0.5">
               {i18n.t("popup.goodToKnow")}
             </b>
             {i18n.t(`stops.${stop.id}.tip`)}
@@ -145,7 +145,7 @@ export const BernMap: React.FC<MapProps> = ({
   }, [selectedStop, onClearSelectedStop]);
 
   return (
-    <div className="relative w-full h-full min-h-[40vh] md:min-h-0 bg-[#e7ddc4]">
+    <div className="relative w-full h-full min-h-[40vh] md:min-h-0 bg-[#cfc7b0]">
       <div
         ref={mapContainerRef}
         className="w-full h-full"

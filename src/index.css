@@ -9,7 +9,7 @@
 
 /* Custom background pattern for vintage ticket effect */
 .bg-repeating-dots {
-  background-image: repeating-linear-gradient(to right, #D8C9A0 0 6px, transparent 6px 10px);
+  background-image: repeating-linear-gradient(to right, #B8AD8E 0 6px, transparent 6px 10px);
 }
 
 /* Leaflet override styles matching parchment theme */
@@ -19,7 +19,7 @@
 }
 
 .stamp-marker svg {
-  filter: drop-shadow(0 4px 8px rgba(27,42,74,0.30));
+  filter: drop-shadow(0 4px 8px rgba(43,43,35,0.30));
   transition: transform 0.15s ease-in-out;
 }
 
@@ -28,16 +28,16 @@
 }
 
 .leaflet-popup-content-wrapper {
-  background: #FBF6E9 !important;
+  background: #E8E2D3 !important;
   border-radius: 12px !important;
-  box-shadow: 0 8px 22px rgba(27,42,74,0.16) !important;
-  border: 1px solid #D8C9A0 !important;
+  box-shadow: 0 8px 22px rgba(43,43,35,0.16) !important;
+  border: 1px solid #B8AD8E !important;
   padding: 0 !important;
 }
 
 .leaflet-popup-tip {
-  background: #FBF6E9 !important;
-  border: 1px solid #D8C9A0 !important;
+  background: #E8E2D3 !important;
+  border: 1px solid #B8AD8E !important;
 }
 
 .leaflet-popup-content {
@@ -45,7 +45,7 @@
 }
 
 .leaflet-container a.leaflet-popup-close-button {
-  color: #1B2A4A !important;
+  color: #2B2B23 !important;
   padding: 6px 8px 0 0 !important;
 }
 
@@ -54,14 +54,14 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F3ECD9;
+  background: #D9D2C0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D8C9A0;
+  background: #B8AD8E;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #A8842C;
+  background: #8A6D2F;
 }
 
 /* General fixes */
@@ -71,5 +71,5 @@
   padding: 0;
 }
 body {
-  background: #F3ECD9;
+  background: #D9D2C0;
 }

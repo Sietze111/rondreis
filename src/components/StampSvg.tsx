@@ -40,24 +40,42 @@ export const GLYPHS: Record<string, string> = {
   train: `<rect x="20" y="22" width="24" height="18" rx="3"/><circle cx="26" cy="42" r="2"/><circle cx="38" cy="42" r="2"/>`,
 
   water: `<path d="M16 28 C20 24 24 24 28 28 C32 32 36 32 40 28 C44 24 48 24 48 28"/> <path d="M16 36 C20 32 24 32 28 36 C32 40 36 40 40 36 C44 32 48 32 48 36"/>`,
+
+  battlefield: `<line x1="20" y1="40" x2="44" y2="24"/><line x1="44" y1="40" x2="20" y2="24"/><line x1="16" y1="44" x2="48" y2="44"/>`,
+
+  bunker: `<rect x="18" y="28" width="28" height="16" rx="2"/><path d="M18 28l4-8h20l4 8"/><line x1="28" y1="35" x2="28" y2="39"/><line x1="36" y1="35" x2="36" y2="39"/>`,
+
+  cannon: `<path d="M20 34l24-12"/><path d="M18 42h28"/><circle cx="26" cy="41" r="4"/><circle cx="38" cy="41" r="4"/>`,
+
+  beach: `<path d="M16 32c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M16 41c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/>`,
+
+  cemetery: `<line x1="22" y1="20" x2="22" y2="36"/><line x1="18" y1="24" x2="26" y2="24"/><line x1="32" y1="16" x2="32" y2="36"/><line x1="28" y1="20" x2="36" y2="20"/><line x1="42" y1="22" x2="42" y2="36"/><line x1="38" y1="26" x2="46" y2="26"/><line x1="16" y1="44" x2="48" y2="44"/>`,
+
+  memorial: `<path d="M26 40h12v-12h-12z"/><path d="M32 9l4 8h-8z"/><line x1="16" y1="44" x2="48" y2="44"/>`,
 };
 
 export const COLORS = {
-  history: "#A8842C",
-  nature: "#B6332B",
-  region: "#3E5C3A",
-  water: "#6B4E71",
-  culture: "#D87C2C",
-  viewpoint: "#2A4A6B",
+  battlefield: "#7A4232",
+  bunker: "#5A6042",
+  museum: "#8A3434",
+  battery: "#A0721F",
+  fort: "#4C5A56",
+  bridge: "#3B5A6E",
+  beach: "#B08D3E",
+  cemetery: "#5C5750",
+  memorial: "#5E4A6E",
 };
 
 export const CAT_LABEL = {
-  history: "History",
-  nature: "Nature",
-  region: "Region",
-  water: "Water",
-  culture: "Culture",
-  viewpoint: "Viewpoint",
+  battlefield: "Battlefield",
+  bunker: "Bunker",
+  museum: "Museum",
+  battery: "Battery",
+  fort: "Fort",
+  bridge: "Bridge",
+  beach: "Beach",
+  cemetery: "Cemetery",
+  memorial: "Memorial",
 };
 
 interface StampSvgProps {
@@ -76,8 +94,8 @@ export const StampSvg: React.FC<StampSvgProps> = ({ cat, glyph, size }) => {
         cx="32"
         cy="32"
         r="30"
-        fill="#FBF6E9"
-        stroke="#1B2A4A"
+        fill="#E8E2D3"
+        stroke="#2B2B23"
         strokeWidth="2.5"
       />
       <g

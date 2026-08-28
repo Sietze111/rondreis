@@ -2,30 +2,37 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import type { Stop } from "./components/StopList";
 import { STOPS } from "./data/stops";
-import confetti from "canvas-confetti";
 import { ProgressBar } from "./components/ProgressBar";
 import { StopList } from "./components/StopList";
-import { BernMap } from "./components/Map";
+import { RouteMap } from "./components/Map";
 import { COLORS } from "./components/StampSvg";
 import { LanguagePicker } from "./components/LanguagePicker";
 import { Map as MapIcon, List as ListIcon, Download } from "lucide-react";
 
 const CATEGORY_IDS = [
   "all",
-  "history",
-  "nature",
-  "culture",
-  "water",
-  "viewpoint",
+  "battlefield",
+  "bunker",
+  "battery",
+  "fort",
+  "museum",
+  "memorial",
+  "cemetery",
+  "bridge",
+  "beach",
 ] as const;
 
 const CATEGORY_COLORS: Record<(typeof CATEGORY_IDS)[number], string> = {
-  all: "#1B2A4A",
-  history: "#A8842C",
-  nature: "#3E7C59",
-  culture: "#8E44AD",
-  water: "#2E86C1",
-  viewpoint: "#E67E22",
+  all: "#2B2B23",
+  battlefield: "#7A4232",
+  bunker: "#5A6042",
+  battery: "#A0721F",
+  fort: "#4C5A56",
+  museum: "#8A3434",
+  memorial: "#5E4A6E",
+  cemetery: "#5C5750",
+  bridge: "#3B5A6E",
+  beach: "#B08D3E",
 };
 
 interface BeforeInstallPromptEvent extends Event {
@@ -94,13 +101,6 @@ function App() {
       newVisited.delete(id);
     } else {
       newVisited.add(id);
-      // Trigger confetti!
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.8 },
-        colors: ["#A8842C", "#B6332B", "#3E5C3A", "#6B4E71", "#1B2A4A"],
-      });
     }
     setVisited(newVisited);
     saveVisited(newVisited);
@@ -114,13 +114,13 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F3ECD9] text-[#1B2A4A] font-sans antialiased">
+    <div className="flex flex-col min-h-screen bg-[#D9D2C0] text-[#2B2B23] font-sans antialiased">
       {/* Header / Masthead */}
-      <header className="px-5 py-6 md:px-8 md:py-7 bg-[#F3ECD9] border-b-2 border-[#1B2A4A] relative">
+      <header className="px-5 py-6 md:px-8 md:py-7 bg-[#D9D2C0] border-b-2 border-[#2B2B23] relative">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
             <div>
-              <p className="font-mono text-[10px] md:text-xs tracking-[0.14em] uppercase text-[#B6332B] font-semibold mb-1.5">
+              <p className="font-mono text-[10px] md:text-xs tracking-[0.14em] uppercase text-[#7A2E2E] font-semibold mb-1.5">
                 {t("subtitle")}
               </p>
               <h1 className="font-serif text-3xl md:text-4xl font-extrabold tracking-tight">
@@ -132,7 +132,7 @@ function App() {
               {deferredPrompt && (
                 <button
                   onClick={handleInstallClick}
-                  className="bg-[#B6332B] text-white border-[1.5px] border-[#B6332B] hover:bg-[#FBF6E9] hover:text-[#B6332B] rounded-full px-5 py-2 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 font-bold shadow-sm hover:-translate-y-0.5 cursor-pointer"
+                  className="bg-[#7A2E2E] text-white border-[1.5px] border-[#7A2E2E] hover:bg-[#E8E2D3] hover:text-[#7A2E2E] rounded-full px-5 py-2 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 font-bold shadow-sm hover:-translate-y-0.5 cursor-pointer"
                 >
                   <Download size={14} />
                   {t("install")}
@@ -140,7 +140,7 @@ function App() {
               )}
             </div>
           </div>
-          <p className="max-w-2xl text-sm md:text-[15px] leading-relaxed text-[#46506b] mb-5">
+          <p className="max-w-2xl text-sm md:text-[15px] leading-relaxed text-[#5A5A4E] mb-5">
             {t("description")}
           </p>
 
@@ -156,9 +156,9 @@ function App() {
                   onClick={() => setActiveCategory(categoryId)}
                   className="border-[1.5px] rounded-full px-4 py-1.5 font-mono text-[11px] tracking-wider transition-all duration-150 flex items-center gap-2 hover:-translate-y-0.5"
                   style={{
-                    borderColor: active ? color : "#1B2A4A",
-                    backgroundColor: active ? color : "#FBF6E9",
-                    color: active ? "#fff" : "#1B2A4A",
+                    borderColor: active ? color : "#2B2B23",
+                    backgroundColor: active ? color : "#E8E2D3",
+                    color: active ? "#fff" : "#2B2B23",
                   }}
                 >
                   <span
@@ -167,7 +167,7 @@ function App() {
                       backgroundColor: active
                         ? "#fff"
                         : categoryId === "all"
-                          ? "#1B2A4A"
+                          ? "#2B2B23"
                           : COLORS[categoryId as keyof typeof COLORS],
                     }}
                   />
@@ -186,13 +186,13 @@ function App() {
       <div className="flex-1 flex flex-col md:flex-row min-h-0 relative">
         {/* Sidebar Container */}
         <aside
-          className={`w-full md:w-[380px] md:border-r-2 md:border-[#1B2A4A] flex-shrink-0 flex flex-col bg-[#F3ECD9] ${
+          className={`w-full md:w-[380px] md:border-r-2 md:border-[#2B2B23] flex-shrink-0 flex flex-col bg-[#D9D2C0] ${
             mobileView === "list" ? "block" : "hidden md:flex"
           }`}
         >
           <div className="overflow-y-auto flex-1 px-4 py-5 md:px-6 md:py-5 max-h-[calc(100vh-220px)] md:max-h-[calc(100vh-188px)] space-y-4">
-            <div className="text-[13px] leading-relaxed text-[#46506b] bg-[#FBF6E9] border border-[#D8C9A0] rounded-xl p-3.5 shadow-sm">
-              <strong className="text-[#1B2A4A]">{t("howToTitle")}</strong>{" "}
+            <div className="text-[13px] leading-relaxed text-[#5A5A4E] bg-[#E8E2D3] border border-[#B8AD8E] rounded-xl p-3.5 shadow-sm">
+              <strong className="text-[#2B2B23]">{t("howToTitle")}</strong>{" "}
               {t("howTo")}
             </div>
 
@@ -218,7 +218,7 @@ function App() {
           }`}
         >
           <div className="absolute inset-0 w-full h-full">
-            <BernMap
+            <RouteMap
               stops={STOPS}
               activeCategory={activeCategory}
               selectedStop={selectedStop}
@@ -228,13 +228,13 @@ function App() {
         </main>
 
         {/* Mobile View Toggle Tabs */}
-        <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#1B2A4A] text-[#F3ECD9] rounded-full shadow-lg border border-[#D8C9A0]/20 flex items-center p-1 z-[9999]">
+        <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-[#2B2B23] text-[#D9D2C0] rounded-full shadow-lg border border-[#B8AD8E]/20 flex items-center p-1 z-[9999]">
           <button
             onClick={() => setMobileView("map")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all ${
               mobileView === "map"
-                ? "bg-[#F3ECD9] text-[#1B2A4A] font-bold"
-                : "text-[#F3ECD9]/80"
+                ? "bg-[#D9D2C0] text-[#2B2B23] font-bold"
+                : "text-[#D9D2C0]/80"
             }`}
           >
             <MapIcon size={14} />
@@ -244,8 +244,8 @@ function App() {
             onClick={() => setMobileView("list")}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-mono tracking-wider transition-all ${
               mobileView === "list"
-                ? "bg-[#F3ECD9] text-[#1B2A4A] font-bold"
-                : "text-[#F3ECD9]/80"
+                ? "bg-[#D9D2C0] text-[#2B2B23] font-bold"
+                : "text-[#D9D2C0]/80"
             }`}
           >
             <ListIcon size={14} />
@@ -255,7 +255,7 @@ function App() {
       </div>
 
       {/* Footer */}
-      <footer className="font-mono text-[10px] text-[#46506b] px-5 py-4 md:px-8 border-t border-[#D8C9A0] bg-[#F3ECD9] z-10 flex flex-col md:flex-row md:justify-between gap-2">
+      <footer className="font-mono text-[10px] text-[#5A5A4E] px-5 py-4 md:px-8 border-t border-[#B8AD8E] bg-[#D9D2C0] z-10 flex flex-col md:flex-row md:justify-between gap-2">
         <div>{t("footer.tiles")}</div>
         <div>{t("footer.built")}</div>
       </footer>

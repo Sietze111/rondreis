@@ -1,0 +1,262 @@
+{
+  "title": "Oorlogsroute Frankrijk — Iepe & Sietze",
+  "subtitle": "Een reis van vader & zoon · Herdenkingen, musea en slagvelden",
+  "description": "Volg het verhaal van D-Day en de Slag om Normandië door Frankrijk met deze zelfstandige veldkaart. Tik op een marker op de kaart of kies een halte uit de lijst om er direct naartoe te vliegen. Tik op het rondje naast een naam om het als bezocht te markeren.",
+
+  "install": "Veldgids installeren",
+
+  "categories": {
+    "all": "Alle haltes",
+    "battlefield": "Slagvelden",
+    "bunker": "Bunkers",
+    "battery": "Geschutsbatterijen",
+    "fort": "Forten",
+    "museum": "Musea",
+    "memorial": "Gedenktekens",
+    "cemetery": "Begraafplaatsen",
+    "bridge": "Bruggen",
+    "beach": "Stranden"
+  },
+
+  "howToTitle": "Zo werkt het:",
+  "howTo": "Tik op een marker op de kaart of kies een halte uit de lijst om er direct naartoe te vliegen. Tik op het rondje naast een naam om het als bezocht te markeren.",
+
+  "mobile": {
+    "map": "Kaartweergave",
+    "list": "Lijst"
+  },
+
+  "footer": {
+    "tiles": "Kaartgegevens & tegels © OpenStreetMap-bijdragers",
+    "built": "Veldgids voor het westfront · Gebouwd met React & Tailwind"
+  },
+  "progress": {
+    "title": "Vordering van de expeditie",
+    "count": "{{visited}} / {{total}} locaties bezocht"
+  },
+  "popup": {
+    "goodToKnow": "Goed om te weten"
+  },
+  "stops": {
+    "dunkirk": {
+      "name": "Duinkerke (Dunkerque)",
+      "blurb": "Het strand en de haven waar de British Expeditionary Force in mei 1940 werd geëvacueerd.",
+      "tip": "Bezoek het Duinkerke Herdenkingsmonument en het oorlogsmuseum aan de Route des Bains."
+    },
+    "blockhaus-eperlecques": {
+      "name": "Blockhaus d'Éperlecques",
+      "blurb": "Een enorme onvoltooide nazi-bunker, gebouwd om V-2-raketten op Londen te lanceren.",
+      "tip": "Gigantisch betonblok, bijgenaamd 'de Bunker' — reken een uur voor het bunkerpad."
+    },
+    "la-coupole": {
+      "name": "La Coupole",
+      "blurb": "Een enorme betonnen koepel, oorspronkelijk bedoeld om V-2-raketten op te slaan, nu een museum.",
+      "tip": "Het planetarium en het historisch centrum zijn een aanrader op een regenachtige dag."
+    },
+    "batterie-todt": {
+      "name": "Batterie Todt",
+      "blurb": "Een Duitse kustbatterij bij Cap Gris-Nez met een massieve gepantserde geschutskoepel.",
+      "tip": "Bezoek het naastgelegen museum van 1944 en beklim de duinen voor het uitzicht over zee."
+    },
+    "fortress-mimoyecques": {
+      "name": "Fort van Mimoyecques",
+      "blurb": "Een geheim ondergronds V-3-kanoncomplex dat in de kalkheuvels is gebouwd.",
+      "tip": "De schachtgangen zijn per lift bereikbaar — erg sfeervol onder de grond."
+    },
+    "fort-de-la-creche": {
+      "name": "Fort de la Crèche",
+      "blurb": "Een gerestaureerd 19e-eeuws fort bij Cap de la Crèche, in WOII door de Duitsers hergebruikt.",
+      "tip": "Combineer met een wandeling over het klifpad langs de kust."
+    },
+    "musee-39-45-ambleteuse": {
+      "name": "Musée 39-45 Ambleteuse",
+      "blurb": "Een privécollectie WOII-militaire objecten en gedenktekens in Ambleteuse.",
+      "tip": "Compacte collectie; prima voor een korte stop tussen de bezienswaardigheden."
+    },
+    "memorial-caen": {
+      "name": "Mémorial de Caen",
+      "blurb": "Het grote museum van Caen over WOII en de Slag om Normandië.",
+      "tip": "Reken een halve dag — het Vredesmonument is een van de beste van Europa."
+    },
+    "merville-battery": {
+      "name": "Merville Battery",
+      "blurb": "De versterkte Duitse geschutsbatterij die Britse parachutisten vlak voor D-Day bestormden.",
+      "tip": "In de zomer zijn er live historische rondleidingen en re-enactments."
+    },
+    "pegasus-bridge": {
+      "name": "Pegasusbrug",
+      "blurb": "De beroemde brug over het Caenkanaal, veroverd door Britse luchtlandingstroepen in de eerste minuten van D-Day.",
+      "tip": "De oude brug is verplaatst naast het nieuwe herdenkingsmuseum."
+    },
+    "memorial-pegasus": {
+      "name": "Pegasus Memorial",
+      "blurb": "Museum bij de Pegasusbrug over de aanval met zweefvliegtuigen.",
+      "tip": "Bekijk de bewaard gebleven Horsa-zweefvliegtuig en de originele Pegasusbrug."
+    },
+    "ouistreham-atlantic-wall": {
+      "name": "Atlantikwall Museum — Ouistreham",
+      "blurb": "Een gerestaureerd Duits bunkercomplex bij Sword Beach.",
+      "tip": "Beklim de top van de 'Riva-Bella' batterij voor een ruim uitzicht over het strand."
+    },
+    "sword-beach": {
+      "name": "Sword Beach",
+      "blurb": "Het meest oostelijke D-Day-landstrand, bestormd door de Britse 3e Divisie.",
+      "tip": "Wandel over de boulevard van Ouistreham en bekijk het D-Day-beeld."
+    },
+    "juno-beach": {
+      "name": "Juno Beach",
+      "blurb": "Het Canadese landingsstrand, later verbonden met de Gemenebest-troepen.",
+      "tip": "Prachtig breed strand; het centrum is 's zomers druk."
+    },
+    "juno-beach-centre": {
+      "name": "Juno Beach Centre",
+      "blurb": "Canada's herdenkingsplaats voor zijn rol in de landingen in Normandië.",
+      "tip": "Check bij aankomst de tijden van de geleide bunkerrondleiding."
+    },
+    "beny-sur-mer-cemetery": {
+      "name": "Canadese Oorlogsbegraafplaats Bény-sur-Mer",
+      "blurb": "Rustplaats voor bijna 2.000 soldaten van de Gemenebest, velen van Juno Beach.",
+      "tip": "Een stille, ontroerende stop — witte kruizen in regelmatige rijen."
+    },
+    "hillman-strongpoint": {
+      "name": "Hillman Strongpoint",
+      "blurb": "Een groot Duits steunpunt bij Colleville-Montgomery, op D-Day veroverd.",
+      "tip": "Gratis te verkennen: loop door de loopgraven en bunkers over de velden."
+    },
+    "gold-beach": {
+      "name": "Gold Beach",
+      "blurb": "Het centrale Britse landingsstrand, waar de Mulberry-haven werd gebouwd.",
+      "tip": "Combineer het beste met Arromanches en de restanten van Port Winston."
+    },
+    "arromanches": {
+      "name": "Arromanches-les-Bains",
+      "blurb": "Locatie van de Mulberry-kunsthaven 'Port Winston'.",
+      "tip": "Bekijk de betonnen caissons vanaf het strand of het uitkijkpunt op de klif."
+    },
+    "arromanches-360": {
+      "name": "Arromanches 360°",
+      "blurb": "Rond bioscooptheater met archiefbeelden van de D-Day-landingen.",
+      "tip": "De breedbeeldfilm draait doorlopend — check de tijden."
+    },
+    "longues-sur-mer-battery": {
+      "name": "Longues-sur-Mer Battery",
+      "blurb": "Een Duitse geschutsbatterij op een klif, waarvan de kazematten nog intact zijn.",
+      "tip": "Loop vanaf de parkeerplaats naar de klif voor het mooiste uitzicht."
+    },
+    "british-normandy-memorial": {
+      "name": "British Normandy Memorial",
+      "blurb": "Gedenkteken voor de Britse soldaten die in de zomer van 1944 in Normandië sneuvelden.",
+      "tip": "De zuilen vermelden ruim 20.000 namen; bij zonsondergang heel indrukwekkend."
+    },
+    "normandy-american-cemetery": {
+      "name": "Normandië Amerikaanse Begraafplaats",
+      "blurb": "De uitgestrekte Amerikaanse begraafplaats boven Omaha Beach, uitkijkend op het Kanaal.",
+      "tip": "Kom vóór de rondleidingen binnen; gedraag je stil — dit is een plek van herdenking."
+    },
+    "overlord-museum": {
+      "name": "Overlord Museum",
+      "blurb": "Museum bij Omaha Beach met voertuigen, uniformen en D-Day-objecten.",
+      "tip": "Dicht bij de Amerikaanse begraafplaats; gemakkelijk te combineren."
+    },
+    "omaha-beach": {
+      "name": "Omaha Beach",
+      "blurb": "Het 'Bloederige Omaha', het Amerikaanse landingsstrand dat de felste strijd van D-Day zag.",
+      "tip": "Loop van het monument naar beneden het zand op voor een stil moment van bezinning."
+    },
+    "wn60": {
+      "name": "WN60 Strongpoint",
+      "blurb": "Een van de Duitse verdedigingsposities van Omaha Beach, tegenover de Amerikaanse begraafplaats.",
+      "tip": "Zoek de restanten in de duinen bij het strand."
+    },
+    "wn62": {
+      "name": "WN62 Strongpoint",
+      "blurb": "Beroemd Duitse stelling bij Omaha die op de eerste landingsgolven schoot.",
+      "tip": "Informatieborden leggen de D-Day-ochtend uur voor uur uit."
+    },
+    "d-day-omaha-museum": {
+      "name": "D-Day Omaha Museum",
+      "blurb": "Een collectie oorlogsrelikwieën van Omaha Beach in Vierville-sur-Mer.",
+      "tip": "Klein particulier museum met wrakstukken en persoonlijke voorwerpen."
+    },
+    "pointe-du-hoc": {
+      "name": "Pointe du Hoc",
+      "blurb": "Het dramatische klif dat door US Rangers werd bestormd, nog altijd bezaaid met kraters.",
+      "tip": "Wandel over het door de strijd getekende schiereiland en bekijk de kazematten."
+    },
+    "la-cambe-german-cemetery": {
+      "name": "Duitse Oorlogsbegraafplaats La Cambe",
+      "blurb": "Duitsland's grootste militaire begraafplaats in Normandië, met ruim 21.000 graven.",
+      "tip": "Het contrast met de Amerikaanse begraafplaats zet rustig aan tot nadenken."
+    },
+    "airborne-museum": {
+      "name": "Airborne Museum — Sainte-Mère-Église",
+      "blurb": "Museum in Sainte-Mère-Église gewijd aan de Amerikaanse luchtlandingen.",
+      "tip": "Zie de C-47 'Douglas' en het verhaal van de beroemde parachute aan de kerktoren."
+    },
+    "sainte-mere-eglise": {
+      "name": "Sainte-Mère-Église",
+      "blurb": "Een van de eerste bevrijde steden, waarop Amerikaanse luchtlandingstroepen parachuteerden.",
+      "tip": "Spot de parachute die aan de kerktoren hangt."
+    },
+    "utah-beach": {
+      "name": "Utah Beach",
+      "blurb": "Het meest westelijke landingsstrand — de 4e Amerikaanse Divisie landde hier op H-uur.",
+      "tip": "Lang open strand; het monument en de duinen zijn de wandeling waard."
+    },
+    "utah-beach-museum": {
+      "name": "Utah Beach Museum",
+      "blurb": "Museum op de daadwerkelijke landingsplaats aan de waterkant.",
+      "tip": "De uitkijk over het strand vanuit de landingsvaartuigopstelling is indrukwekkend."
+    },
+    "azeville-battery": {
+      "name": "Azeville Battery",
+      "blurb": "Een goed bewaard gebleven Duitse kustbatterij landinwaarts vanaf Utah Beach.",
+      "tip": "Rondleidingen verkennen de duistere ondergrondse gangen."
+    },
+    "la-fiere": {
+      "name": "La Fière",
+      "blurb": "Locatie van hevige gevechten om de damwegbrug die Amerikaanse parachutisten vasthielden.",
+      "tip": "De brug en het Iron Mike-monument markeren een cruciaal D-Day-kruispunt."
+    },
+    "dead-mans-corner": {
+      "name": "Dead Man's Corner Museum",
+      "blurb": "Museum bij een beroemd kruispunthuis waarom luchtlandingstroepen vochten.",
+      "tip": "Interessante privécollectie in het oorspronkelijke gebouw."
+    },
+    "carentan": {
+      "name": "Carentan",
+      "blurb": "Strategische stad veroverd door de 101e Luchtlandingsdivisie, sleutel tot het verbinden van de bruggenhoofden.",
+      "tip": "Wandel door het stadscentrum en bekijk de kerk van Notre-Dame."
+    },
+    "normandy-victory-museum": {
+      "name": "Normandy Victory Museum",
+      "blurb": "Museum in Carentan over de volledige Slag om Normandië.",
+      "tip": "Grote diorama's in scène gezet met levensgrote soldaten en voertuigen."
+    },
+    "bayeux-battle-of-normandy-museum": {
+      "name": "Bayeux Battle of Normandy Museum",
+      "blurb": "Museum over de Britse zijde van de Slag om Normandië.",
+      "tip": "Combineer met het nabijgelegen Tapijt van Bayeux als je tijd hebt."
+    },
+    "bayeux-war-cemetery": {
+      "name": "Bayeux War Cemetery",
+      "blurb": "De grootste Gemenebest-begraafplaats in Frankrijk, met ruim 4.000 graven.",
+      "tip": "Vredig en onberispelijk onderhouden; op loopafstand van het stadscentrum."
+    },
+    "saint-lo": {
+      "name": "Saint-Lô",
+      "blurb": "Een cruciaal kruispunt dat zwaar werd verwoest en in juli 1944 bevochten.",
+      "tip": "Bekijk het beeld 'Maan boven Normandië' in het stadscentrum."
+    },
+    "montormel-memorial": {
+      "name": "Montormel Memorial",
+      "blurb": "Een gedenkteken op de plek waar de zak van Falaise werd gesloten.",
+      "tip": "Het diorama legt de omsingeling van de Duitse legermacht uit."
+    },
+    "falaise-pocket": {
+      "name": "Zak van Falaise",
+      "blurb": "Het slagveld waar het Duitse leger in augustus 1944 werd omsingeld en vernietigd.",
+      "tip": "Rijd door de landweggetjes om de omvang van de omsingeling te besefen."
+    }
+  }
+}
